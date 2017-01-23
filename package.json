@@ -7,7 +7,7 @@
     "tslintconfig",
     "tslintplugin",
     "tslint-config",
-    "tslint-plugin",
+    "tslint-config-shopify",
     "shopify"
   ],
   "main": "index.js",
@@ -16,8 +16,8 @@
     "tslint": "tslint -c index.js *.ts --project tsconfig.json --type-check",
     "eslint": "eslint . --max-warnings 0"
   },
-  "homepage": "https://github.com/Shopify/tslint-plugin-shopify#readme",
-  "repository": "git+https://github.com/Shopify/tslint-plugin-shopify.git",
+  "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",
+  "repository": "https://github.com/Shopify/tslint-config-shopify#readme",
   "eslintConfig": {
     "extends": [
       "plugin:shopify/es5",
@@ -27,7 +27,7 @@
   "author": "Shopify <dev@shopify.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Shopify/tslint-plugin-shopify/issues"
+    "url": "https://github.com/Shopify/tslint-config-shopify/issues"
   },
   "devDependencies": {
     "eslint": "3.13.x",
