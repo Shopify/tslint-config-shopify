@@ -29,7 +29,7 @@ Now you can run TSLint by adding the following linting script to your `package.j
 ```
 {
   "scripts": {
-    "tslint": "tslint -c tslint.json ./**/*.ts ./**/*.tsx  --project tsconfig.json --type-check"
+    "tslint": "tslint -c tslint.json './{app,server,client,packages,config}/**/*.{ts,tsx}' --exclude './**/node_modules/**/*.{ts,tsx}' --project tsconfig.json --type-check"
   }
 }
 ```
