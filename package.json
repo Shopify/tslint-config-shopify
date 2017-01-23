@@ -1,7 +1,7 @@
 {
   "name": "tslint-config-shopify",
   "version": "1.0.0",
-  "description": "Shopify's baseline ESLint config.",
+  "description": "Shopify's baseline TSLint config.",
   "keywords": [
     "tslint",
     "tslintconfig",
@@ -17,7 +17,7 @@
     "eslint": "eslint . --max-warnings 0"
   },
   "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",
-  "repository": "https://github.com/Shopify/tslint-config-shopify#readme",
+  "repository": "https://github.com/Shopify/tslint-config-shopify",
   "eslintConfig": {
     "extends": [
       "plugin:shopify/es5",
