@@ -1,6 +1,6 @@
 {
   "name": "tslint-config-shopify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shopify's baseline TSLint config.",
   "keywords": [
     "tslint",
