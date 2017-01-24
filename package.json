@@ -12,8 +12,10 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "tslint": "tslint -c index.js *.ts --project tsconfig.json --type-check",
+    "test": "mocha tests/index.test.js --compilers js:babel-core/register",
+    "test:watch": "yarn test -- --watch --reporter min",
+    "test:cover": "babel-node node_modules/.bin/isparta cover --report text --report html _mocha -- --reporter spec --recursive tests/",
     "eslint": "eslint . --max-warnings 0"
   },
   "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",
@@ -26,12 +28,24 @@
   },
   "author": "Shopify <dev@shopify.com>",
   "license": "MIT",
+  "babel": {
+    "presets": [
+      "shopify"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/Shopify/tslint-config-shopify/issues"
   },
   "devDependencies": {
+    "babel-cli": "6.22.x",
+    "babel-core": "6.22.x",
+    "babel-preset-shopify": "15.0.x",
+    "chai": "3.5.x",
     "eslint": "3.13.x",
-    "eslint-plugin-shopify": "^15.1.1",
+    "eslint-plugin-shopify": "15.1.x",
+    "isparta": "4.0.x",
+    "istanbul": "0.4.x",
+    "mocha": "3.2.x",
     "typescript": "2.1.x"
   },
   "peerDependencies": {
