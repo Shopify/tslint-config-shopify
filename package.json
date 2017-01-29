@@ -13,8 +13,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tslint": "tslint -c index.js *.ts --project tsconfig.json --type-check",
-    "eslint": "eslint . --max-warnings 0",
+    "lint:ts": "tslint -c index.js *.ts --project tsconfig.json --type-check",
+    "lint:js": "eslint . --max-warnings 0",
+    "check": "yarn run lint:js && yarn run lint:ts",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",
