@@ -63,3 +63,39 @@ Override these rules in `tslint.json`:
 }
 ```
 
+## Inline Linting in Text Editors
+
+
+`tslint-config-shopify` comes with a few rules that require type-checking to be enabled, however `tslint` uses a [private API](https://github.com/palantir/tslint/issues/1445#issuecomment-236330061) to resolves rules that require `type-checking`.
+For this reason, text editors will fail when trying to resolve rules that require `type-checking`.
+
+To resolve this issue, turn off the rules that require type-checking in your `tslint.json`
+```
+{
+  "extends": ["tslint-config-shopify"],
+  "rules": {
+    "no-for-in-array": false,
+    "no-inferred-empty-object-type": false,
+    "restrict-plus-operands": false
+  }
+}
+```
+
+However, this will omit validating these rules in your `tslint` script. To enable the `type-checking` rules to be validated in your script, it is [recommended](https://github.com/Microsoft/vscode-tslint/issues/70#issuecomment-263120859) that you run your CLI `tslint` script against a sepereate `tslint.json` file.
+
+Eg: `tslint-full.json`
+```
+{
+  "extends": ["tslint-config-shopify"]
+}
+```
+
+Then update your CLI tslint script to run against `tslint-full.json`.
+
+```
+{
+  "scripts": {
+    "tslint": "tslint -c ./config/tslint-full.json './src/**/*.{ts,tsx}' --project tsconfig.json --type-check"
+  }
+}
+```
