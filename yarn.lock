@@ -1857,6 +1857,10 @@ tryit@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tryit/-/tryit-1.0.3.tgz#393be730a9446fd1ead6da59a014308f36c289cb"
 
+tslint-react@2.3.x:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/tslint-react/-/tslint-react-2.3.0.tgz#4d10ea96de278458aac3f9a7f616a442a18634a2"
+
 tslint@4.3.x:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/tslint/-/tslint-4.3.1.tgz#28f679c53ca4b273688bcb6fcf0dde7ff1bb2169"
