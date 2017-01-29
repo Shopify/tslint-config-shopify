@@ -38,9 +38,11 @@
     "eslint": "3.13.x",
     "eslint-plugin-shopify": "^15.1.1",
     "semantic-release": "6.3.x",
-    "typescript": "2.1.x"
+    "typescript": "2.1.x",
+    "tslint": "4.3.x"
   },
   "peerDependencies": {
+    "eslint": "3.13.x",
     "tslint": "4.3.x"
   },
   "dependencies": {
