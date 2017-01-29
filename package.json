@@ -13,7 +13,7 @@
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "yarn run check",
     "lint:ts": "tslint -c index.js *.ts --project tsconfig.json --type-check",
     "lint:js": "eslint . --max-warnings 0",
     "check": "yarn run lint:js && yarn run lint:ts",
