@@ -99,3 +99,10 @@ Then update your CLI tslint script to run against `tslint-full.json`.
   }
 }
 ```
+
+## Commiting
+This repo uses [`commitizen`](https://github.com/commitizen/cz-cli)'s simple commit conventions.
+To commit changes using `commitizen`, stage your changes with `git add . `, then launch `commitizen` with
+```
+yarn run commit
+```
