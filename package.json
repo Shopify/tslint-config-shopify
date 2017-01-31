@@ -1,6 +1,6 @@
 {
   "name": "tslint-config-shopify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Shopify's baseline TSLint config.",
   "keywords": [
     "tslint",
@@ -12,9 +12,11 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tslint": "tslint -c index.js *.ts --project tsconfig.json --type-check",
-    "eslint": "eslint . --max-warnings 0"
+    "commit": "git-cz",
+    "test": "yarn run check",
+    "lint:ts": "tslint -c index.js *.ts --project tsconfig.json --type-check",
+    "lint:js": "eslint . --max-warnings 0",
+    "check": "yarn run lint:js && yarn run lint:ts"
   },
   "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",
   "repository": "https://github.com/Shopify/tslint-config-shopify",
@@ -30,14 +32,23 @@
     "url": "https://github.com/Shopify/tslint-config-shopify/issues"
   },
   "devDependencies": {
+    "commitizen": "2.9.x",
+    "cz-conventional-changelog": "1.2.x",
     "eslint": "3.13.x",
     "eslint-plugin-shopify": "^15.1.1",
+    "tslint": "4.3.x",
     "typescript": "2.1.x"
   },
   "peerDependencies": {
+    "eslint": "3.13.x",
     "tslint": "4.3.x"
   },
   "dependencies": {
     "merge": "1.x"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
