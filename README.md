@@ -54,7 +54,8 @@ npm run tslint
 
 Some of the rules configured in `tslint-config-shopify`  may not be sufficient for your project.
 Override these rules in `tslint.json`:
-```
+
+```json
 {
   "extends": "tslint-config-shopify",
   "rules": {
@@ -67,12 +68,14 @@ Override these rules in `tslint.json`:
 
 
 `tslint-config-shopify` comes with a few rules that require type-checking to be enabled, however `tslint` uses a [private API](https://github.com/palantir/tslint/issues/1445#issuecomment-236330061) to resolves rules that require `type-checking`.
+
 For this reason, text editors will fail when trying to resolve rules that require `type-checking`.
 
 To resolve this issue, turn off the rules that require type-checking in your `tslint.json`
-```
+
+```json
 {
-  "extends": ["tslint-config-shopify"],
+  "extends": ["./config/tslint-full.json"],
   "rules": {
     "no-for-in-array": false,
     "no-inferred-empty-object-type": false,
@@ -83,8 +86,8 @@ To resolve this issue, turn off the rules that require type-checking in your `ts
 
 However, this will omit validating these rules in your `tslint` script. To enable the `type-checking` rules to be validated in your script, it is [recommended](https://github.com/Microsoft/vscode-tslint/issues/70#issuecomment-263120859) that you run your CLI `tslint` script against a sepereate `tslint.json` file.
 
-Eg: `tslint-full.json`
-```
+Eg: `./config/tslint-full.json`
+```json
 {
   "extends": ["tslint-config-shopify"]
 }
@@ -92,7 +95,7 @@ Eg: `tslint-full.json`
 
 Then update your CLI tslint script to run against `tslint-full.json`.
 
-```
+```json
 {
   "scripts": {
     "tslint": "tslint -c ./config/tslint-full.json './src/**/*.{ts,tsx}' --project tsconfig.json --type-check"
