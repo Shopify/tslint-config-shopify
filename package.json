@@ -14,7 +14,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tslint": "tslint -c index.js *.ts --project tsconfig.json --type-check",
-    "eslint": "eslint . --max-warnings 0"
+    "eslint": "eslint . --max-warnings 0",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",
   "repository": "https://github.com/Shopify/tslint-config-shopify",
@@ -32,7 +33,8 @@
   "devDependencies": {
     "eslint": "3.13.x",
     "eslint-plugin-shopify": "^15.1.1",
-    "typescript": "2.1.x"
+    "typescript": "2.1.x",
+    "semantic-release": "^6.3.2"
   },
   "peerDependencies": {
     "tslint": "4.3.x"
