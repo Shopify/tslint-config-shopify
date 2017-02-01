@@ -37,7 +37,6 @@
     "eslint": "3.13.x",
     "eslint-plugin-shopify": "^15.1.1",
     "tslint": "4.3.x",
-    "tslint-react": "2.3.x",
     "typescript": "2.1.x"
   },
   "peerDependencies": {
@@ -45,7 +44,8 @@
     "tslint": "4.3.x"
   },
   "dependencies": {
-    "merge": "1.x"
+    "merge": "1.x",
+    "tslint-react": "2.3.x"
   },
   "config": {
     "commitizen": {
