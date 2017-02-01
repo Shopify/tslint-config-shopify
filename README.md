@@ -1,4 +1,4 @@
-# tslint-config-shopify
+# tslint-config-shopify :+1:
 [![Circle CI](https://circleci.com/gh/Shopify/eslint-plugin-shopify.svg?style=svg)](https://circleci.com/gh/Shopify/tslint-config-shopify)
 
 Shopify’s TSlint rules and configs.
