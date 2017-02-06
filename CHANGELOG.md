@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [1.1.2] - 2017-02-06
+### Changed
+- Update `space-before-function-paren` rule ([#20](https://github.com/Shopify/tslint-config-shopify/pull/20))
+
+
+## [1.1.1] - 2017-02-01
+### Changed
+- Moved [`tslint-react`](https://github.com/palantir/tslint-react) as a dependency ([#17](https://github.com/Shopify/tslint-config-shopify/pull/17/files))
+
+
 ## [1.1.0] - 2017-01-31
 ### Added
 - Added [`tslint-react`](https://github.com/palantir/tslint-react) ([#12](https://github.com/Shopify/tslint-config-shopify/pull/12))
