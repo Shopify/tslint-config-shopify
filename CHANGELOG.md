@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [1.1.3] - 2017-02-09
+### Changed
+- Update `typedef` rule ([#23](https://github.com/Shopify/tslint-config-shopify/pull/23))
+
 ## [1.1.2] - 2017-02-06
 ### Changed
 - Update `space-before-function-paren` rule ([#20](https://github.com/Shopify/tslint-config-shopify/pull/20))
