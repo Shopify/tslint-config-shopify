@@ -23,7 +23,7 @@ Shopify’s TSLint rules come bundled in `tslint-config-shopify`.
 To enable these rules, create a `tslint.json` file at the root level of your project, and extend `tslint-config-shopify`.
 ```
 {
-  "extends": "tslint-config-shopify"
+  "extends": "tslint-config-shopify/base"
 }
 ```
 
@@ -57,7 +57,7 @@ Override these rules in `tslint.json`:
 
 ```json
 {
-  "extends": "tslint-config-shopify",
+  "extends": "tslint-config-shopify/base",
   "rules": {
     "no-console": false
   }
@@ -71,34 +71,31 @@ Override these rules in `tslint.json`:
 
 For this reason, text editors will fail when trying to resolve rules that require `type-checking`.
 
-To resolve this issue, turn off the rules that require type-checking in your `tslint.json`
+To resolve this issue, you can extend the typed configuration
 
 ```json
 {
-  "extends": ["./config/tslint-full.json"],
-  "rules": {
-    "no-for-in-array": false,
-    "no-inferred-empty-object-type": false,
-    "restrict-plus-operands": false
-  }
+  "extends": ["tslint-config-shopify/typed"]
 }
 ```
 
-However, this will omit validating these rules in your `tslint` script. To enable the `type-checking` rules to be validated in your script, it is [recommended](https://github.com/Microsoft/vscode-tslint/issues/70#issuecomment-263120859) that you run your CLI `tslint` script against a sepereate `tslint.json` file.
+However, this will omit enforcing rules that require type-checking (`no-for-in-array`, `no-inferred-empty-object-type`, `restrict-plus-operands`).
 
-Eg: `./config/tslint-full.json`
+To enable the `type-checking` rules to be validated in your script, it is [recommended](https://github.com/Microsoft/vscode-tslint/issues/70#issuecomment-263120859) that you run your CLI `tslint` script against the base config file, `tslint-base.json`.
+
+Eg: `./config/tslint-base.json`
 ```json
 {
-  "extends": ["tslint-config-shopify"]
+  "extends": ["tslint-config-shopify/base"]
 }
 ```
 
-Then update your CLI tslint script to run against `tslint-full.json`.
+Then update your CLI tslint script to run against `tslint-base.json`.
 
 ```json
 {
   "scripts": {
-    "tslint": "tslint -c ./config/tslint-full.json './src/**/*.{ts,tsx}' --project tsconfig.json --type-check"
+    "tslint": "tslint -c ./config/tslint-base.json './src/**/*.{ts,tsx}' --project tsconfig.json --type-check"
   }
 }
 ```
