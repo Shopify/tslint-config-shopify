@@ -71,20 +71,17 @@ Override these rules in `tslint.json`:
 
 For this reason, text editors will fail when trying to resolve rules that require `type-checking`.
 
-To resolve this issue, turn off the rules that require type-checking in your `tslint.json`
+To resolve this issue, you can extend the untyped configuration
 
 ```json
 {
-  "extends": ["./config/tslint-full.json"],
-  "rules": {
-    "no-for-in-array": false,
-    "no-inferred-empty-object-type": false,
-    "restrict-plus-operands": false
-  }
+  "extends": ["tslint-config-shopify/untyped"]
 }
 ```
 
-However, this will omit validating these rules in your `tslint` script. To enable the `type-checking` rules to be validated in your script, it is [recommended](https://github.com/Microsoft/vscode-tslint/issues/70#issuecomment-263120859) that you run your CLI `tslint` script against a sepereate `tslint.json` file.
+However, this will not enforce rules that require type-checking.
+
+To enable the `type-checking` rules to be validated in your script, it is [recommended](https://github.com/Microsoft/vscode-tslint/issues/70#issuecomment-263120859) that you run your CLI `tslint` script against the base configuration.
 
 Eg: `./config/tslint-full.json`
 ```json

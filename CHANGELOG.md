@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [1.1.5] - 2017-02-22
+### Changed
+- Add `tslint-config-shopify/base` and `tslint-config-shopify/typed` configs [(#29)](https://github.com/Shopify/tslint-config-shopify/pull/29)
+
+## [1.1.4] - 2017-02-17
+### Changed
+- Update `variable-name` rule [(27)](https://github.com/Shopify/tslint-config-shopify/pull/27)
+- Remove commitizen and cz-conventional-changelog [(#26) (https://github.com/Shopify/tslint-config-shopify/pull/26)
+
 ## [1.1.3] - 2017-02-09
 ### Changed
 - Update `typedef` rule ([#23](https://github.com/Shopify/tslint-config-shopify/pull/23))

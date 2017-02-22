@@ -10,10 +10,10 @@
     "tslint-config-shopify",
     "shopify"
   ],
-  "main": "index.js",
+  "main": "base.json",
   "scripts": {
     "test": "yarn run check",
-    "lint:ts": "tslint -c index.js *.ts --project tsconfig.json --type-check",
+    "lint:ts": "tslint -c base.json *.ts --project tsconfig.json --type-check",
     "lint:js": "eslint . --max-warnings 0",
     "check": "yarn run lint:js && yarn run lint:ts"
   },
