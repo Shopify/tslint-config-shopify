@@ -1,6 +1,6 @@
-// Consumed by space-before-function-paren rule in style.js
+// Consumed by space-before-function-paren rule in style.ts
 
-module.export = [true, {
+export const spaceBeforeFunctionParen = [true, {
   'anonymous': 'never',
   'named': 'never',
   'asyncArrow': 'always',

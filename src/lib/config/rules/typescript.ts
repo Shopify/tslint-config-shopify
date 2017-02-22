@@ -2,13 +2,15 @@
 // These rules find errors related to TypeScript features
 // Reference https://palantir.github.io/tslint/rules/
 
-module.exports = {
+import {typedefWhitespaceLeft, typedefWhitespaceRight} from './rule-helpers/typedef-whitespace';
+
+export const typescriptRules = {
   // Enforces function overloads to be consecutive.
   'adjacent-overload-signatures': true,
   // Requires explicit visibility declarations for class members.
   'member-access': false,
   // Enforces member ordering.
-  'member-ordering': [true, {'order': require('./rule-helpers/member-ordering-list')}],
+  // 'member-ordering': [true, {'order': memberOrderingRule}],
   // Diallows usages of `any` as a type declaration.
   'no-any': false,
   // Forbids empty interfaces.
@@ -35,7 +37,7 @@ module.exports = {
   // Requires type definitions to exist.
   'typedef': false,
   // Requires or disallows whitespace for type definitions.
-  'typedef-whitespace': [true, require('./rule-helpers/typedef-whitespace-left'), require('./rule-helpers/typedef-whitespace-right')],
+  'typedef-whitespace': [true, typedefWhitespaceLeft, typedefWhitespaceRight],
   // Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter.
   'unified-signatures': true,
 };

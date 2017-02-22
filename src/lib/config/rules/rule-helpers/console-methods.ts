@@ -1,4 +1,4 @@
-module.exports = [
+export const consoleMethods = [
   true,
   'log',
   'assert',
