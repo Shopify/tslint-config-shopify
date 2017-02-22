@@ -1,8 +1,5 @@
 {
-  "extends": "./dist/index",
-  "rules": {
-    "no-for-in-array": false,
-    "no-inferred-empty-object-type": false,
-    "restrict-plus-operands": false
-  }
+  "extends": [
+     "./untyped.json"
+  ]
 }
