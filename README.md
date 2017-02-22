@@ -23,7 +23,7 @@ Shopify’s TSLint rules come bundled in `tslint-config-shopify`.
 To enable these rules, create a `tslint.json` file at the root level of your project, and extend `tslint-config-shopify`.
 ```
 {
-  "extends": "tslint-config-shopify/base"
+  "extends": "tslint-config-shopify"
 }
 ```
 
@@ -57,7 +57,7 @@ Override these rules in `tslint.json`:
 
 ```json
 {
-  "extends": "tslint-config-shopify/base",
+  "extends": "tslint-config-shopify",
   "rules": {
     "no-console": false
   }
@@ -79,14 +79,14 @@ To resolve this issue, you can extend the typed configuration
 }
 ```
 
-However, this will omit enforcing rules that require type-checking (`no-for-in-array`, `no-inferred-empty-object-type`, `restrict-plus-operands`).
+However, this will omit enforcing rules that require type-checking.
 
 To enable the `type-checking` rules to be validated in your script, it is [recommended](https://github.com/Microsoft/vscode-tslint/issues/70#issuecomment-263120859) that you run your CLI `tslint` script against the base config file, `tslint-base.json`.
 
 Eg: `./config/tslint-base.json`
 ```json
 {
-  "extends": ["tslint-config-shopify/base"]
+  "extends": ["tslint-config-shopify"]
 }
 ```
 

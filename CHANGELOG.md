@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## [1.1.5] - 2017-02-21
+## [1.1.5] - 2017-02-22
 ### Changed
 - Add `tslint-config-shopify/base` and `tslint-config-shopify/typed` configs [(#29)](https://github.com/Shopify/tslint-config-shopify/pull/29)
 
