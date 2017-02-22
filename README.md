@@ -71,31 +71,31 @@ Override these rules in `tslint.json`:
 
 For this reason, text editors will fail when trying to resolve rules that require `type-checking`.
 
-To resolve this issue, you can extend the typed configuration
+To resolve this issue, you can extend the untyped configuration
 
 ```json
 {
-  "extends": ["tslint-config-shopify/typed"]
+  "extends": ["tslint-config-shopify/untyped"]
 }
 ```
 
-However, this will omit enforcing rules that require type-checking.
+However, this will not enforce rules that require type-checking.
 
-To enable the `type-checking` rules to be validated in your script, it is [recommended](https://github.com/Microsoft/vscode-tslint/issues/70#issuecomment-263120859) that you run your CLI `tslint` script against the base config file, `tslint-base.json`.
+To enable the `type-checking` rules to be validated in your script, it is [recommended](https://github.com/Microsoft/vscode-tslint/issues/70#issuecomment-263120859) that you run your CLI `tslint` script against the base configuration.
 
-Eg: `./config/tslint-base.json`
+Eg: `./config/tslint-full.json`
 ```json
 {
   "extends": ["tslint-config-shopify"]
 }
 ```
 
-Then update your CLI tslint script to run against `tslint-base.json`.
+Then update your CLI tslint script to run against `tslint-full.json`.
 
 ```json
 {
   "scripts": {
-    "tslint": "tslint -c ./config/tslint-base.json './src/**/*.{ts,tsx}' --project tsconfig.json --type-check"
+    "tslint": "tslint -c ./config/tslint-full.json './src/**/*.{ts,tsx}' --project tsconfig.json --type-check"
   }
 }
 ```
