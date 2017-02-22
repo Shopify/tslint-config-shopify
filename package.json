@@ -10,9 +10,6 @@
     "tslint-config-shopify",
     "shopify"
   ],
-  "files": [
-    "dist/"
-  ],
   "main": "./base.json",
   "scripts": {
     "prepublish": "yarn run build",
