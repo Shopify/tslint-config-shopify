@@ -8,5 +8,5 @@ import {styleRules} from './rules/style';
 import {typescriptRules} from './rules/typescript';
 
 module.exports = {
-  'rules': merge(functionalityRules, maintainabilityRules, styleRules, typescriptRules)
+  'rules': merge(functionalityRules, maintainabilityRules, styleRules, typescriptRules),
 };

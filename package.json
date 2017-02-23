@@ -17,7 +17,7 @@
     "clean": "rimraf dist",
     "test": "yarn run check",
     "lint:ts": "yarn run build && tslint -c ./base.json './src/**/*.{ts,tsx}' --project ./tsconfig.json --type-check",
-    "check": "yarn run lint:js && yarn run lint:ts"
+    "check": "yarn run lint:ts"
   },
   "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",
   "repository": "https://github.com/Shopify/tslint-config-shopify",
