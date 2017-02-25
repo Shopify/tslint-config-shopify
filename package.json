@@ -42,7 +42,6 @@
     "tslint": "4.3.x"
   },
   "dependencies": {
-    "merge": "1.x",
     "tslint-react": "2.3.x"
   }
 }
