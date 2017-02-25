@@ -12,9 +12,13 @@
   ],
   "main": "./base.json",
   "scripts": {
-    "prepublish": "yarn run build",
-    "build": "yarn run clean && tsc",
-    "clean": "rimraf dist",
+    "prebuild": "yarn run build:clean",
+    "build:clean": "rimraf build rules base.js react.js untyped.js",
+    "build": "tsc",
+    "predist": "yarn run build",
+    "dist": "cp -R build/** .",
+    "postpublish": "yarn run build:clean",
+    "prepublish": "yarn run dist",
     "test": "yarn run check",
     "lint:ts": "yarn run build && tslint -c ./base.json './src/**/*.{ts,tsx}' --project ./tsconfig.json --type-check",
     "check": "yarn run lint:ts"

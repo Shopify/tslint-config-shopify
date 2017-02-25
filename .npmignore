@@ -2,3 +2,4 @@ src
 circle.yml
 yarn.lock
 .editorconfig
+build

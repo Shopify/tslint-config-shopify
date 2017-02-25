@@ -1,3 +1,3 @@
 {
-  "extends": ["./dist/base"]
+  "extends": ["./base"]
 }
