@@ -19,9 +19,11 @@
     "dist": "cp -R build/** .",
     "postpublish": "yarn run build:clean",
     "prepublish": "yarn run dist",
-    "test": "yarn run check",
-    "lint:ts": "yarn run build && tslint -c ./base.json './src/**/*.{ts,tsx}' --project ./tsconfig.json --type-check",
-    "check": "yarn run lint:ts"
+    "pretest": "yarn run dist",
+    "test": "yarn run lint:ts",
+    "lint": "yarn run dist && yarn run lint:ts",
+    "lint:ts": "tslint -c ./base.json './src/**/*.{ts,tsx}' --project ./tsconfig.json --type-check",
+    "check": "yarn run test && yarn run build:clean"
   },
   "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",
   "repository": "https://github.com/Shopify/tslint-config-shopify",
