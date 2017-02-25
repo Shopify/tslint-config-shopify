@@ -5,7 +5,8 @@
         "noImplicitAny": false,
         "sourceMap": false,
         "outDir": "./build",
-        "noEmitOnError": true
+        "noEmitOnError": true,
+        "moduleResolution": "node"
     },
     "include": [
         "./src/**/*"
