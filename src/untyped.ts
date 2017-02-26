@@ -1,5 +1,5 @@
 module.exports = {
-  'extends': './base',
+  'extends': ['./base', './customRules'],
    'rules': {
     // Warns for an awaited value that is not a Promise.
     'await-promise': false,

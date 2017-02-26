@@ -1,6 +1,8 @@
 build
 node_modules
-rules
+/rules
+/customRules
+customRules.js
 base.js
 react.js
 untyped.js
