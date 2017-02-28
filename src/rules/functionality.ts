@@ -3,7 +3,9 @@
 // otherwise confusing constructs that are prone to producing bugs:
 // Reference https://palantir.github.io/tslint/rules/
 
-module.exports = {
+import consoleMethods from './rule-helpers/console-methods';
+
+export default {
   // Bans the use of specific functions or global methods.
   'ban': false,
   // Enforces braces for `if`/`for`/`do`/`while` statements.
@@ -22,7 +24,7 @@ module.exports = {
   // Disallows any type of assignment in conditionals.
   'no-conditional-assignment': true,
   // Bans the use of specified `console` methods.
-  'no-console': require('./rule-helpers/console-methods'),
+  'no-console': consoleMethods,
   // Disallows access to the constructors of `String`, `Number`, and `Boolean`.
   'no-construct': true,
   // Disallows `debugger` statements.

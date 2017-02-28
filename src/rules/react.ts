@@ -2,7 +2,7 @@
 // Lint rules related to React & JSX for TSLint.
 // Reference https://github.com/palantir/tslint-react
 
-module.exports = {
+export default {
   // Enforces a consistent style for multiline JSX elements which promotes ease of
   // editing via line-wise manipulations as well as maintainabilty via small diffs when changes are made.
   'jsx-alignment': true,

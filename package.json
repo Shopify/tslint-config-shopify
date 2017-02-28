@@ -10,38 +10,38 @@
     "tslint-config-shopify",
     "shopify"
   ],
-  "main": "base.json",
+  "main": "./base",
   "scripts": {
-    "test": "yarn run check",
-    "lint:ts": "tslint -c base.json *.ts --project tsconfig.json --type-check",
-    "lint:js": "eslint . --max-warnings 0",
-    "check": "yarn run lint:js && yarn run lint:ts"
+    "prebuild": "yarn run build:clean",
+    "build:clean": "rimraf build rules base.js react.js untyped.js",
+    "build": "tsc",
+    "predist": "yarn run build",
+    "dist": "cp -R build/** .",
+    "postpublish": "yarn run build:clean",
+    "prepublish": "yarn run dist",
+    "test": "yarn run lint",
+    "prelint": "yarn run build",
+    "lint": "yarn run lint:ts",
+    "lint:ts": "tslint -c ./config/full.json './src/**/*.{ts,tsx}' --project ./tsconfig.json --type-check",
+    "check": "yarn run test && yarn run build:clean"
   },
   "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",
   "repository": "https://github.com/Shopify/tslint-config-shopify",
-  "eslintConfig": {
-    "extends": [
-      "plugin:shopify/es5",
-      "plugin:shopify/node"
-    ]
-  },
   "author": "Shopify <dev@shopify.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Shopify/tslint-config-shopify/issues"
   },
   "devDependencies": {
-    "eslint": "3.13.x",
-    "eslint-plugin-shopify": "^15.1.1",
+    "@types/node": "^7.0.5",
+    "rimraf": "^2.6.0",
     "tslint": "4.3.x",
-    "typescript": "2.1.x"
+    "typescript": "^2.1.6"
   },
   "peerDependencies": {
-    "eslint": "3.13.x",
     "tslint": "4.3.x"
   },
   "dependencies": {
-    "merge": "1.x",
     "tslint-react": "2.3.x"
   }
 }

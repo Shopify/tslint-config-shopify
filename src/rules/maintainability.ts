@@ -2,7 +2,7 @@
 // These rules make code maintenance easier
 // Reference https://palantir.github.io/tslint/rules/
 
-module.exports = {
+export default {
   // Enforces a threshold of cyclomatic complexity.
   'cyclomatic-complexity': false,
   // Ensures the file ends with a newline.
@@ -31,5 +31,5 @@ module.exports = {
   'prefer-const': true,
   // Requires or disallows trailing commas in array and object literals, destructuring assignments, function
   // and tuple typings, named imports and function parameters.
-  'trailing-comma': [true, {multiline: 'always', singleline: 'never'}],
+  'trailing-comma': [true, {'multiline': 'always', 'singleline': 'never'}],
 };

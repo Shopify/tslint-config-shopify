@@ -1,6 +1,6 @@
-// Consumed by member-ordering rule in typescript.js
+// Consumed by member-ordering rule in typescript.ts
 
-module.exports = [
+export default [
   'public-static-field',
   'protected-static-field',
   'private-static-field',

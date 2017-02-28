@@ -2,7 +2,9 @@
 // These rules enforce consistent style across your codebase
 // Reference https://palantir.github.io/tslint/rules/
 
-module.exports = {
+import spaceBeforeFunctionParen from './rule-helpers/space-before-function-paren-rule';
+
+export default {
   // Enforces vertical alignment.
   'align': true,
   // Requires using either ‘T[]’ or ‘Array' for arrays.
@@ -50,7 +52,7 @@ module.exports = {
   // Enforces consistent semicolon usage at the end of every statement.
   'semicolon': [true, 'always', 'ignore-interfaces'],
   // Require or disallow a space before function parenthesis
-  'space-before-function-paren': require('./rule-helpers/space-before-function-paren-rule'),
+  'space-before-function-paren': spaceBeforeFunctionParen,
   // Checks variable names for various errors.
   'variable-name': [true, 'ban-keywords', 'check-format', 'allow-pascal-case'],
   // Enforces whitespace style conventions.
