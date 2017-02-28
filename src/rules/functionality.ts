@@ -10,7 +10,7 @@ export const functionalityRules = {
   'ban': false,
   // Enforces braces for `if`/`for`/`do`/`while` statements.
   'curly': true,
-  // Requires a `for ... in` statement to be filtered with awn `if` statement.
+  // Requires a `for ... in` statement to be filtered with an `if` statement.
   'forin': true,
   // Disallows importing the specified modules directly via `import` and `require`.
   // Instead only sub modules may be imported from that module.
