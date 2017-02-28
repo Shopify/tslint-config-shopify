@@ -3,6 +3,7 @@
 // Reference https://palantir.github.io/tslint/rules/
 
 import {typedefWhitespaceLeft, typedefWhitespaceRight} from './rule-helpers/typedef-whitespace';
+import {memberOrderingList} from './rule-helpers/member-ordering-list';
 
 export const typescriptRules = {
   // Enforces function overloads to be consecutive.
@@ -10,7 +11,7 @@ export const typescriptRules = {
   // Requires explicit visibility declarations for class members.
   'member-access': false,
   // Enforces member ordering.
-  // 'member-ordering': [true, {'order': memberOrderingRule}],
+  'member-ordering': [true, {'order': memberOrderingList}],
   // Diallows usages of `any` as a type declaration.
   'no-any': false,
   // Forbids empty interfaces.
