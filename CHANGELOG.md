@@ -2,13 +2,32 @@
 
 ## [Unreleased]
 
+## [1.4.0] - 2017-03-06
+### Added
+- Added new tslint rules from [v4.4.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v440) and [v4.5.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v450) releases [(#33)](https://github.com/Shopify/tslint-config-shopify/pull/33):
+    - `await-promise`
+    - `no-duplicate-super`
+    - `no-floating-promises`
+    - `no-misused-new`
+    - `no-unbound-method`
+    - `strict-type-predicates`
+    - `no-unnecessary-initializer`
+    - `no-unnecessary-qualifier`
+    - `arrow-return-shorthand`
+    - `match-default-export-name`
+    - `newline-before-return`
+    - `prefer-function-over-method`
+    - `prefer-method-signature`
+    - `ban-types`
+    - `no-import-side-effect`
+    - `no-non-null-assertion`
 
 ## [1.3.0] - 2017-03-01
 ### Add
 - Add Custom rules: `trailing-comma-interface`, `jsx-boolean-value` [(#34)](https://github.com/Shopify/tslint-config-shopify/pull/34)
 
 ## [1.2.0] - 2017-02-28
-### Add
+### Changed
 - Migrate code base to fully utilize Typescript [(#31)](https://github.com/Shopify/tslint-config-shopify/pull/31)
 
 ## [1.1.5] - 2017-02-22
