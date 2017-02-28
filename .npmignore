@@ -3,3 +3,5 @@ circle.yml
 yarn.lock
 .editorconfig
 build
+*.log
+.nvmrc
