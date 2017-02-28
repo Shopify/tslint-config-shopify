@@ -38,7 +38,7 @@ export const styleRules = {
   // Disallows parameter properties in class constructors.
   'no-parameter-properties': false,
   // Enforces consistent object literal property quote style.
-  'object-literal-key-quotes': [true, 'always'],
+  'object-literal-key-quotes': [true, 'as-needed'],
   // Enforces use of ES6 object literal shorthand when possible.
   'object-literal-shorthand': true,
   // Requires the specified tokens to be on the same line as the expression preceding them.
