@@ -21,8 +21,9 @@
     "prepublish": "yarn run dist",
     "pretest": "yarn run dist",
     "test": "yarn run lint:ts",
-    "lint": "yarn run dist && yarn run lint:ts",
-    "lint:ts": "tslint -c tslint.json './src/**/*.{ts,tsx}' --project ./tsconfig.json --type-check",
+    "prelint": "yarn run build",
+    "lint": "yarn run lint:ts",
+    "lint:ts": "tslint -c ./config/full.json './src/**/*.{ts,tsx}' --project ./tsconfig.json --type-check",
     "check": "yarn run test && yarn run build:clean"
   },
   "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",

@@ -1,8 +1,6 @@
 {
   "extends": [
-     "./untyped.json"
-  ],
-  "rules": {
-    "object-literal-key-quotes": [true, "always"]
-  }
+     "./untyped.json",
+     "./config/rules"
+  ]
 }
