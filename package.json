@@ -10,7 +10,7 @@
     "tslint-config-shopify",
     "shopify"
   ],
-  "main": "./base.json",
+  "main": "./base",
   "scripts": {
     "prebuild": "yarn run build:clean",
     "build:clean": "rimraf build rules base.js react.js untyped.js",
