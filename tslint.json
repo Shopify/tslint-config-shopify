@@ -1,6 +1,6 @@
 {
   "extends": [
-     "./untyped.json",
+     "build/untyped",
      "./config/rules"
   ]
 }
