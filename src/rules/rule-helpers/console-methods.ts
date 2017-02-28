@@ -1,4 +1,4 @@
-export const consoleMethods = [
+export default [
   true,
   'log',
   'assert',

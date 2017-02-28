@@ -3,9 +3,9 @@
 // Reference https://palantir.github.io/tslint/rules/
 
 import {typedefWhitespaceLeft, typedefWhitespaceRight} from './rule-helpers/typedef-whitespace';
-import {memberOrderingList} from './rule-helpers/member-ordering-list';
+import memberOrderingList from './rule-helpers/member-ordering-list';
 
-export const typescriptRules = {
+export default {
   // Enforces function overloads to be consecutive.
   'adjacent-overload-signatures': true,
   // Requires explicit visibility declarations for class members.

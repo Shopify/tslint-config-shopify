@@ -2,9 +2,9 @@
 // These rules enforce consistent style across your codebase
 // Reference https://palantir.github.io/tslint/rules/
 
-import {spaceBeforeFunctionParen} from './rule-helpers/space-before-function-paren-rule';
+import spaceBeforeFunctionParen from './rule-helpers/space-before-function-paren-rule';
 
-export const styleRules = {
+export default {
   // Enforces vertical alignment.
   'align': true,
   // Requires using either ‘T[]’ or ‘Array' for arrays.

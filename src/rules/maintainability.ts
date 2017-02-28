@@ -2,7 +2,7 @@
 // These rules make code maintenance easier
 // Reference https://palantir.github.io/tslint/rules/
 
-export const maintainabilityRules = {
+export default {
   // Enforces a threshold of cyclomatic complexity.
   'cyclomatic-complexity': false,
   // Ensures the file ends with a newline.

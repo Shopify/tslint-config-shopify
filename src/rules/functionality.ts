@@ -3,9 +3,9 @@
 // otherwise confusing constructs that are prone to producing bugs:
 // Reference https://palantir.github.io/tslint/rules/
 
-import {consoleMethods} from './rule-helpers/console-methods';
+import consoleMethods from './rule-helpers/console-methods';
 
-export const functionalityRules = {
+export default {
   // Bans the use of specific functions or global methods.
   'ban': false,
   // Enforces braces for `if`/`for`/`do`/`while` statements.

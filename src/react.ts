@@ -1,4 +1,4 @@
-import {reactRules} from './rules/react';
+import reactRules from './rules/react';
 
 module.exports = {
   'extends': ['./base', 'tslint-react'],

@@ -1,6 +1,6 @@
 // Consumed by member-ordering rule in typescript.ts
 
-export const memberOrderingList = [
+export default [
   'public-static-field',
   'protected-static-field',
   'private-static-field',
