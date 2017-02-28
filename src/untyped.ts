@@ -1,6 +1,6 @@
 module.exports = {
   'extends': './base',
-   'rules': {
+  'rules': {
     // Warns for an awaited value that is not a Promise.
     'await-promise': false,
     // Warns on comparison to a boolean literal, as in x === true.
