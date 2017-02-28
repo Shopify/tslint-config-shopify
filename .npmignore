@@ -5,3 +5,6 @@ yarn.lock
 build
 *.log
 .nvmrc
+config/
+tsconfig.json
+tslint.json
