@@ -62,7 +62,7 @@ export default {
    // Warns when a method is used as outside of a method call.
   'no-unbound-method': false,
    // Warns when using an expression of type ‘any’ in an unsafe way. Type casts and tests are allowed. Expressions that work on all values (such as ‘”” + x’) are allowed.
-  'no-unsafe-any': true,
+  'no-unsafe-any': false,
   // Disallows control flow statements, such as `return`, `continue`,
   // `break` and `throws` in finally blocks.
   'no-unsafe-finally': true,
