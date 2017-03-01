@@ -13,17 +13,17 @@
   "main": "./base",
   "scripts": {
     "prebuild": "yarn run build:clean",
-    "build:clean": "rimraf build rules base.js react.js untyped.js",
+    "build:clean": "rimraf build rules customRules base.js react.js untyped.js",
     "build": "tsc",
     "predist": "yarn run build",
     "dist": "cp -R build/** .",
     "postpublish": "yarn run build:clean",
     "prepublish": "yarn run dist",
-    "test": "yarn run lint",
     "prelint": "yarn run build",
-    "lint": "yarn run lint:ts",
-    "lint:ts": "tslint -c ./config/full.json './src/**/*.{ts,tsx}' --project ./tsconfig.json --type-check",
-    "check": "yarn run test && yarn run build:clean"
+    "lint": "tslint -c ./config/full.json './src/**/*.{ts,tsx}' --project ./tsconfig.json --type-check",
+    "pretest": "yarn run build",
+    "test": "scripts/customRulesTests.sh",
+    "check": "npm-run-all test lint build:clean"
   },
   "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",
   "repository": "https://github.com/Shopify/tslint-config-shopify",
@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@types/node": "^7.0.5",
+    "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.0",
     "tslint": "4.3.x",
     "typescript": "^2.1.6"
