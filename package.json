@@ -20,11 +20,10 @@
     "postpublish": "yarn run build:clean",
     "prepublish": "yarn run dist",
     "prelint": "yarn run build",
-    "lint": "yarn run lint:ts",
-    "lint:ts": "tslint -c ./config/full.json './src/**/*.{ts,tsx}' --project ./tsconfig.json --type-check",
+    "lint": "tslint -c ./config/full.json './src/**/*.{ts,tsx}' --project ./tsconfig.json --type-check",
     "pretest": "yarn run build",
     "test": "scripts/customRulesTests.sh",
-    "check": "npm-run-all test lint:ts build:clean"
+    "check": "npm-run-all test lint build:clean"
   },
   "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",
   "repository": "https://github.com/Shopify/tslint-config-shopify",

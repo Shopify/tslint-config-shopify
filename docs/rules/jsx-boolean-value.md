@@ -42,6 +42,7 @@ Bad:
 ```
 
 When `never` is set, errors are raised when `true` is explicitly set.
+
 Good:
 ```
 <Foo bar />;

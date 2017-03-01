@@ -1,20 +1,3 @@
-/**
- * @license
- * Copyright 2017 Palantir Technologies, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the 'License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 import * as Lint from 'tslint';
 import * as ts from 'typescript';
 
@@ -58,21 +41,20 @@ export class Rule extends Lint.Rules.AbstractRule {
     }
 }
 
+function isInitializerTrue(initializer: ts.JsxExpression | ts.StringLiteral | null | undefined): boolean {
+    return initializer &&
+    initializer.kind === ts.SyntaxKind.JsxExpression &&
+    initializer.expression.kind === ts.SyntaxKind.TrueKeyword;
+}
+
 class JsxBooleanValueWalker extends Lint.RuleWalker {
     protected visitJsxAttribute(node: ts.JsxAttribute) {
-
-        if (node.initializer && node.initializer.kind === ts.SyntaxKind.JsxExpression) {
-            const kind = node.initializer.expression && node.initializer.expression.kind;
-            const isValueTrue = kind === ts.SyntaxKind.TrueKeyword;
-            const noOptionsSet = !this.hasOption(OPTION_ALWAYS) && !this.hasOption(OPTION_NEVER);
-
-            if ((noOptionsSet || this.hasOption(OPTION_NEVER)) && isValueTrue) {
-                this.addFailure(this.createFailure(node.getStart(), node.getWidth(), Rule.NEVER_MESSAGE));
-            }
-        }
-
-        if (!node.initializer && (this.hasOption(OPTION_ALWAYS))) {
+        const always = this.hasOption(OPTION_ALWAYS);
+        const never = this.hasOption(OPTION_NEVER) || !always;
+        if (always && !node.initializer) {
             this.addFailure(this.createFailure(node.getStart(), node.getWidth(), Rule.ALWAYS_MESSAGE));
+        } else if (never && isInitializerTrue(node.initializer)) {
+            this.addFailure(this.createFailure(node.getStart(), node.getWidth(), Rule.NEVER_MESSAGE));
         }
     }
 }

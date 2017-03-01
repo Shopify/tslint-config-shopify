@@ -1,4 +1,4 @@
-function render(){
+function render() {
   return(
     <Foo readOnly={true} />
          ~~~~~~~~~~~~~~~ [Value must be omitted for boolean attributes]

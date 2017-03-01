@@ -7,7 +7,7 @@ export class Rule extends Lint.Rules.AbstractRule {
     public static metadata: Lint.IRuleMetadata = {
         'ruleName': 'trailing-comma-interface',
         'description': 'Enforce trailing commas in interface properties.',
-        'rationale': 'Our team uses traling commas in interfaces.',
+        'rationale': 'Our team prefers traling commas over trailing semicolons.',
         'optionsDescription': 'Not configurable.',
         'options': null,
         'type': 'typescript',
@@ -24,7 +24,7 @@ export class Rule extends Lint.Rules.AbstractRule {
 
 class TrailingCommaInterfaceWalker extends Lint.RuleWalker {
    public visitInterfaceDeclaration(node: ts.InterfaceDeclaration) {
-    node.members.map( (propertySignature) => {
+    node.members.map((propertySignature) => {
         if (propertySignature.getText().slice(-1) !== ',') {
             this.addFailure(this.createFailure(propertySignature.getStart(), propertySignature.getWidth(), Rule.FAILURE_STRING));
         }

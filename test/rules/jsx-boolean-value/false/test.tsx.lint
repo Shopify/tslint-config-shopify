@@ -1,4 +1,4 @@
-function render(){
+function render() {
   return(
     <Foo readOnly />
     <Foo readOnly={true} />
