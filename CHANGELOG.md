@@ -2,9 +2,18 @@
 
 ## [Unreleased]
 
+
+## [1.3.0] - 2017-03-01
+### Add
+- Add Custom rules: `trailing-comma-interface`, `jsx-boolean-value` [(#34)](https://github.com/Shopify/tslint-config-shopify/pull/34)
+
+## [1.2.0] - 2017-02-28
+### Add
+- Migrate code base to fully utilize Typescript [(#31)](https://github.com/Shopify/tslint-config-shopify/pull/31)
+
 ## [1.1.5] - 2017-02-22
 ### Changed
-- Add `tslint-config-shopify/base` and `tslint-config-shopify/typed` configs [(#29)](https://github.com/Shopify/tslint-config-shopify/pull/29)
+- Add `tslint-config-shopify/base`, `tslint-config-shopify/typed`, and `tslint-config-shopify/untyped` configs [(#29)](https://github.com/Shopify/tslint-config-shopify/pull/29)
 
 ## [1.1.4] - 2017-02-17
 ### Changed
