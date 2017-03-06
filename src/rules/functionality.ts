@@ -7,7 +7,7 @@ import consoleMethods from './rule-helpers/console-methods';
 
 export default {
   // Warns for an awaited value that is not a Promise.
-  'await-promise': false,
+  'await-promise': true,
   // Bans the use of specific functions or global methods.
   'ban': false,
   // Enforces braces for `if`/`for`/`do`/`while` statements.

@@ -21,6 +21,7 @@
     - `ban-types`
     - `no-import-side-effect`
     - `no-non-null-assertion`
+    - `no-unsafe-any`
 
 ## [1.3.0] - 2017-03-01
 ### Add

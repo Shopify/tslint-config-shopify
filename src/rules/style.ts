@@ -53,9 +53,9 @@ export default {
   'one-variable-per-declaration': true,
   // Requires that import statements be alphabetized.
   'ordered-imports': false,
-  // Warns for class methods that do not use ‘this’. <FEEDBACK>
-  'prefer-function-over-method': false,
-  // Prefer foo(): void over foo: () => void in interfaces and types. <FEEDBACK>
+  // Warns for class methods that do not use ‘this’.
+  'prefer-function-over-method': true,
+  // Prefer foo(): void over foo: () => void in interfaces and types.
   'prefer-method-signature': true,
   // Requires single or double quotes for string literals.
   'quotemark': [true, 'single', 'jsx-double', 'avoid-escape'],

@@ -3,6 +3,9 @@ module.exports = {
   'rules': {
     // Warns for an awaited value that is not a Promise.
     'await-promise': false,
+    // Requires that a default import have the same name as the declaration it imports.
+    // Does nothing for anonymous default exports.
+    'match-default-export-name': false,
     // Warns on comparison to a boolean literal, as in x === true.
     'no-boolean-literal-compare': false,
     // Promises returned by functions must be handled appropriately.
