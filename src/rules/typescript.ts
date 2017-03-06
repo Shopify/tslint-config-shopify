@@ -19,7 +19,7 @@ export default {
   // Forbids empty interfaces.
   'no-empty-interface': false,
   // Avoid import statements with side-effect.
-  'no-import-side-effect': true,
+  'no-import-side-effect': false,
   // Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean.
   'no-inferrable-types': true,
   // Disallows internal `module`
