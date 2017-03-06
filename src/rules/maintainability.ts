@@ -25,6 +25,10 @@ export default {
   'no-require-imports': true,
   // Disallows trailing whitespace at the end of a line.
   'no-trailing-whitespace': true,
+  // Forbids a ‘var’/’let’ statement or destructuring initializer to be initialized to ‘undefined’.
+  'no-unnecessary-initializer': true,
+  // Warns when a namespace qualifier (A.x) is unnecessary.
+  'no-unnecessary-qualifier': true,
   // Requires keys in object literals to be sorted alphabetically
   'object-literal-sort-keys': false,
   // Requires that variable declarations use `const` instead of `let` if possible.

@@ -2,6 +2,26 @@
 
 ## [Unreleased]
 
+## [1.4.0] - 2017-03-06
+### Added
+- Added new tslint rules from [v4.4.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v440) and [v4.5.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v450) releases [(#33)](https://github.com/Shopify/tslint-config-shopify/pull/33):
+    - `arrow-return-shorthand`
+    - `await-promise`
+    - `ban-types`
+    - `match-default-export-name`
+    - `newline-before-return`
+    - `no-duplicate-super`
+    - `no-floating-promises`
+    - `no-import-side-effect`
+    - `no-misused-new`
+    - `no-non-null-assertion`
+    - `no-unbound-method`
+    - `no-unnecessary-initializer`
+    - `no-unnecessary-qualifier`
+    - `no-unsafe-any`
+    - `prefer-function-over-method`
+    - `prefer-method-signature`
+    - `strict-type-predicates`
 
 ## [1.3.0] - 2017-03-01
 ### Add

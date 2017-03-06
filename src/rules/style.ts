@@ -11,6 +11,8 @@ export default {
   'array-type': false,
   // Requires parentheses around the parameters of arrow function definitions.
   'arrow-parens': true,
+  // Suggests to convert () => { return x; } to () => x.
+  'arrow-return-shorthand': true,
   // An interface or literal type with just a call signature can be written as a function type.
   'callable-types': false,
   // Enforces PascalCased class and interface names.
@@ -29,6 +31,10 @@ export default {
   'interface-over-type-literal': true,
   // Enforces basic format rules for JSDoc comments.
   'jsdoc-format': true,
+  // Requires that a default import have the same name as the declaration it imports. Does nothing for anonymous default exports.
+  'match-default-export-name': true,
+  // Enforces blank line before return when not the only line in the block.
+  'newline-before-return': false,
   // Requires parentheses when invoking a constructor via the `new` keyword.
   'new-parens': true,
   // Requires the use of `as Type` for type assertions instead of `<Type>`.
@@ -47,6 +53,10 @@ export default {
   'one-variable-per-declaration': true,
   // Requires that import statements be alphabetized.
   'ordered-imports': false,
+  // Warns for class methods that do not use ‘this’.
+  'prefer-function-over-method': true,
+  // Prefer foo(): void over foo: () => void in interfaces and types.
+  'prefer-method-signature': true,
   // Requires single or double quotes for string literals.
   'quotemark': [true, 'single', 'jsx-double', 'avoid-escape'],
   // Enforces consistent semicolon usage at the end of every statement.

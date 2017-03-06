@@ -8,6 +8,8 @@ import memberOrderingList from './rule-helpers/member-ordering-list';
 export default {
   // Enforces function overloads to be consecutive.
   'adjacent-overload-signatures': true,
+  // Bans specific types from being used. Does not ban the corresponding runtime objects from being used.
+  'ban-types': false,
   // Requires explicit visibility declarations for class members.
   'member-access': false,
   // Enforces member ordering.
@@ -16,6 +18,8 @@ export default {
   'no-any': false,
   // Forbids empty interfaces.
   'no-empty-interface': false,
+  // Avoid import statements with side-effect.
+  'no-import-side-effect': false,
   // Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean.
   'no-inferrable-types': true,
   // Disallows internal `module`
@@ -25,6 +29,8 @@ export default {
   'no-magic-numbers': false,
   // Disallows use of internal `modules` and `namespaces`.
   'no-namespace': false,
+  // Disallows non-null assertions.
+  'no-non-null-assertion': true,
   // Disallows `/// <reference path=>` imports (use ES6-style imports instead).
   'no-reference': true,
   // Disallows the use of require statements except in import statements.
