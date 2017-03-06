@@ -22,6 +22,8 @@
     - `prefer-function-over-method`
     - `prefer-method-signature`
     - `strict-type-predicates`
+### Fix
+- Bug Fix [#37](https://github.com/Shopify/tslint-config-shopify/issues/37)([#38](https://github.com/Shopify/tslint-config-shopify/pull/38))
 
 ## [1.3.0] - 2017-03-01
 ### Add
