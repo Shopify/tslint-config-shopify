@@ -44,6 +44,7 @@ export class Rule extends Lint.Rules.AbstractRule {
 function isInitializerTrue(initializer: ts.JsxExpression | ts.StringLiteral | null | undefined): boolean {
     return initializer &&
     initializer.kind === ts.SyntaxKind.JsxExpression &&
+    initializer.expression &&
     initializer.expression.kind === ts.SyntaxKind.TrueKeyword;
 }
 
