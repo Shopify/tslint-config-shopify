@@ -1,0 +1,5 @@
+{
+    "rules": {
+        "structured-imports": true
+    }
+}

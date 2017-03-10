@@ -1,0 +1,6 @@
+import * as SomethingAbsolute from 'something-absolute';
+import {absolute1, absolute2} from 'library';
+import AnotherAbsolute from 'another-absolute';
+import { anotherRelativeImport } from "../ancestorImport";
+import * as relative from "./relativeImport1";
+import { relativeImport } from "./relativeImport2";

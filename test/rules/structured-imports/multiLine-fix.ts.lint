@@ -1,0 +1,6 @@
+import {Foo, Bar, Baz} from 'FooBarBaz';
+import BarModule from 'BarModule';
+import Foo from './foo';
+import Bar from './Bar';
+import Foo2 from './foo2';
+import Bar2 from './Bar2';

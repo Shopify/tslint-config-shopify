@@ -1,0 +1,11 @@
+import * as relative from "./relativeImport1";
+import { relativeImport } from "./relativeImport2";
+import { anotherRelativeImport } from "../ancestorImport";
+                                      ~~~~~~~~~~~~~~~~~~~~ [Import structure should be listed absolute imports first, then relative imports.]
+
+import AnotherAbsolute from 'another-absolute';
+                            ~~~~~~~~~~~~~~~~~~~ [Import structure should be listed absolute imports first, then relative imports.]
+import * as SomethingAbsolute from 'something-absolute';
+                                   ~~~~~~~~~~~~~~~~~~~~~ [Import structure should be listed absolute imports first, then relative imports.]
+import {absolute1, absolute2} from 'library';
+                                   ~~~~~~~~~~ [Import structure should be listed absolute imports first, then relative imports.]
