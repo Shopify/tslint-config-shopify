@@ -66,7 +66,7 @@ function isCurrentImportValid(prevImport: ImportType, currImport: ImportType): b
 
 function getNextOrderedImport(importType: ImportType) {
   if (importType < importStuctureOrder.length - 1) {
-    return importStuctureOrder[importType + 1];
+    return importStuctureOrder[(importType as number) + 1];
   }
 }
 
