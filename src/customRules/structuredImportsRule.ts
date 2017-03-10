@@ -15,7 +15,7 @@ export class Rule extends Lint.Rules.AbstractRule {
   };
   /* tslint:enable:object-literal-sort-keys */
 
-  public static STRUCTURED_IMPORTS_ABS_FIRST_ERROR = 'Import structure should be listed as absolute imports first, then relative imports.';
+  public static STRUCTURED_IMPORTS_ABS_FIRST_ERROR = 'Imports should be listed in the following order: module imports, absolute imports, relative imports.';
 
   public apply(sourceFile: ts.SourceFile): Lint.RuleFailure[] {
     const structuredImportsWalker = new StructuredImportsWalker(sourceFile, this.getOptions());
@@ -48,12 +48,11 @@ class StructuredImportsWalker extends Lint.RuleWalker {
       this.currentImport = getImportType(importPath);
     } else {
       this.currentImport = getImportType(importPath);
-      if (!isCurrentImportValid(this.previousImport, this.currentImport)) {
+      if (isCurrentImportValid(this.previousImport, this.currentImport)) {
+        this.previousImport = this.currentImport;
+      } else {
         this.addFailure(this.createFailure(node.moduleSpecifier.getStart(), node.moduleSpecifier.getFullWidth(), Rule.STRUCTURED_IMPORTS_ABS_FIRST_ERROR));
       }
-    }
-    if (isCurrentImportValid(this.previousImport, this.currentImport)) {
-      this.previousImport = this.currentImport;
     }
   }
 }

@@ -1,11 +1,11 @@
 import * as relative from "./relativeImport1";
 import { relativeImport } from "./relativeImport2";
 import { anotherRelativeImport } from "../ancestorImport";
-                                      ~~~~~~~~~~~~~~~~~~~~ [Import structure should be listed as absolute imports first, then relative imports.]
+                                      ~~~~~~~~~~~~~~~~~~~~ [Imports should be listed in the following order: module imports, absolute imports, relative imports.]
 
 import AnotherAbsolute from 'another-absolute';
-                            ~~~~~~~~~~~~~~~~~~~ [Import structure should be listed as absolute imports first, then relative imports.]
+                            ~~~~~~~~~~~~~~~~~~~ [Imports should be listed in the following order: module imports, absolute imports, relative imports.]
 import * as SomethingAbsolute from 'something-absolute';
-                                   ~~~~~~~~~~~~~~~~~~~~~ [Import structure should be listed as absolute imports first, then relative imports.]
+                                   ~~~~~~~~~~~~~~~~~~~~~ [Imports should be listed in the following order: module imports, absolute imports, relative imports.]
 import {absolute1, absolute2} from 'library';
-                                   ~~~~~~~~~~ [Import structure should be listed as absolute imports first, then relative imports.]
+                                   ~~~~~~~~~~ [Imports should be listed in the following order: module imports, absolute imports, relative imports.]
