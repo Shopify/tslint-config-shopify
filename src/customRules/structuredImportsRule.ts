@@ -1,16 +1,13 @@
 import * as ts from 'typescript';
 import * as Lint from 'tslint';
 
-import * as path from 'path';
-
 export class Rule extends Lint.Rules.AbstractRule {
   /* tslint:disable:object-literal-sort-keys */
   public static metadata: Lint.IRuleMetadata = {
     'ruleName': 'structured-imports',
-    'description': 'Enforce a structure to your imports. Absolute imports listed first, then relative.',
-    'descriptionDetails': Lint.Utils.dedent``,
-    'hasFix': true,
-    'optionsDescription': Lint.Utils.dedent``,
+    'description': 'Enforce structure to your imports. Import structure should be listed in the folloing order: modules, absolute imports,  relative parent/ancestor directories, relative sibling directors.',
+    'hasFix': false,
+    'optionsDescription': 'Not configurable.',
     'options': null,
     'optionExamples': null,
     'type': 'style',
@@ -18,7 +15,7 @@ export class Rule extends Lint.Rules.AbstractRule {
   };
   /* tslint:enable:object-literal-sort-keys */
 
-  public static STRUCTURED_IMPORTS_ABS_FIRST_ERROR = 'Import structure should be listed absolute imports first, then relative imports.';
+  public static STRUCTURED_IMPORTS_ABS_FIRST_ERROR = 'Import structure should be listed as absolute imports first, then relative imports.';
 
   public apply(sourceFile: ts.SourceFile): Lint.RuleFailure[] {
     const structuredImportsWalker = new StructuredImportsWalker(sourceFile, this.getOptions());
@@ -27,12 +24,13 @@ export class Rule extends Lint.Rules.AbstractRule {
 }
 
 enum ImportType {
-  Absolute = 0,
-  RelativeAncestor = 1, // '../'
-  RelativeCurrent = 2, // './'
+  Module = 0, // 'module'
+  Absolute = 1, // '/some/folder/file'
+  RelativeAncestor = 2, // '../parentFolder'
+  RelativeSibling = 3, // './siblingFolder'
 };
 
-const importStuctureOrder = [ImportType.Absolute, ImportType.RelativeAncestor, ImportType.RelativeCurrent];
+const importStuctureOrder = [ImportType.Module, ImportType.Absolute, ImportType.RelativeAncestor, ImportType.RelativeSibling];
 
 class StructuredImportsWalker extends Lint.RuleWalker {
   private previousImport: ImportType;
@@ -60,20 +58,11 @@ class StructuredImportsWalker extends Lint.RuleWalker {
   }
 }
 
-
 function isCurrentImportValid(prevImport: ImportType, currImport: ImportType): boolean {
-
   if (prevImport === currImport) {
     return true;
   }
-
-  if (prevImport === ImportType.Absolute && currImport === getNextOrderedImport(prevImport)) {
-    return true;
-  }
-  if (prevImport === ImportType.RelativeAncestor && currImport === getNextOrderedImport(prevImport)) {
-    return true;
-  }
-
+  return getNextOrderedImport(prevImport) === currImport;
 }
 
 function getNextOrderedImport(importType: ImportType) {
@@ -82,20 +71,25 @@ function getNextOrderedImport(importType: ImportType) {
   }
 }
 
-
 function getImportType(path: string): ImportType {
-  if (isRelativeCurrent(path)) {
-    return ImportType.RelativeCurrent;
+  if (isRelativeSibling(path)) {
+    return ImportType.RelativeSibling;
   } else if (isRelativeAncestor(path)) {
     return ImportType.RelativeAncestor;
+  } else if (isAbsolute(path)) {
+    return ImportType.Absolute;
   }
-  return ImportType.Absolute;
+  return ImportType.Module;
 }
 
-function isRelativeCurrent(path: string) {
-    return path.substr(1, 2) === './' ;
+function isAbsolute(path: string) {
+  return path[1] === '/' ; // [0] is quote mark
 }
 
 function isRelativeAncestor(path: string) {
-    return path.substr(1, 4) === '../' ;
+  return path.substr(1, 4) === '../' ; // path[0] is quote mark
+}
+
+function isRelativeSibling(path: string) {
+  return path.substr(1, 2) === './' ; // path[0] is quote mark
 }

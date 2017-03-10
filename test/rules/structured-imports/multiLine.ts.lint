@@ -2,9 +2,9 @@ import Foo from './foo';
 import Bar from './Bar';
 
 import {Foo, Bar, Baz} from 'FooBarBaz';
-                            ~~~~~~~~~~~~ [Import structure should be listed absolute imports first, then relative imports.]
+                            ~~~~~~~~~~~~ [Import structure should be listed as absolute imports first, then relative imports.]
 import BarModule from 'BarModule';
-                      ~~~~~~~~~~~~ [Import structure should be listed absolute imports first, then relative imports.]
+                      ~~~~~~~~~~~~ [Import structure should be listed as absolute imports first, then relative imports.]
 
 import Foo2 from './foo2';
 import Bar2 from './Bar2';
