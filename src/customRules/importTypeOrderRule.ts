@@ -71,24 +71,12 @@ function getNextOrderedImport(importType: ImportType) {
 }
 
 function getImportType(path: string): ImportType {
-  if (isRelativeSibling(path)) {
+  if (path.substr(1, 2) === './') {
     return ImportType.Sibling;
-  } else if (isRelativeAncestor(path)) {
+  } else if (path.substr(1, 4) === '../') {
     return ImportType.Ancestor;
-  } else if (isAbsolute(path)) {
+  } else if (path[1] === '/') {
     return ImportType.Absolute;
   }
   return ImportType.External;
-}
-
-function isAbsolute(path: string) {
-  return path[1] === '/' ; // [0] is quote mark
-}
-
-function isRelativeAncestor(path: string) {
-  return path.substr(1, 4) === '../' ; // path[0] is quote mark
-}
-
-function isRelativeSibling(path: string) {
-  return path.substr(1, 2) === './' ; // path[0] is quote mark
 }
