@@ -2,9 +2,11 @@ import Foo from './foo';
 import Bar from './Bar';
 
 import {Foo, Bar, Baz} from 'FooBarBaz';
-                            ~~~~~~~~~~~~ [Imports should be listed in the following order: module imports, absolute imports, relative imports.]
+                            ~~~~~~~~~~~~ [0]
 import BarModule from 'BarModule';
-                      ~~~~~~~~~~~~ [Imports should be listed in the following order: module imports, absolute imports, relative imports.]
+                      ~~~~~~~~~~~~ [0]
 
 import Foo2 from './foo2';
 import Bar2 from './Bar2';
+
+[0]: Imports should be listed in the following order: module imports, absolute imports, ancestor imports, sibling imports.

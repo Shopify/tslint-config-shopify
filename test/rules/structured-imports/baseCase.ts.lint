@@ -1,3 +1,5 @@
 import Foo from './foo';
 import BarModule from 'BarModule';
-                      ~~~~~~~~~~~~ [Imports should be listed in the following order: module imports, absolute imports, relative imports.]
+                      ~~~~~~~~~~~~ [0]
+
+[0]: Imports should be listed in the following order: module imports, absolute imports, ancestor imports, sibling imports.
