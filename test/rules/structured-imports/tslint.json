@@ -1,5 +1,5 @@
 {
     "rules": {
-        "structured-imports": true
+        "import-type-order": true
     }
 }

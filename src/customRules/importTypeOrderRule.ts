@@ -4,14 +4,14 @@ import * as Lint from 'tslint';
 export class Rule extends Lint.Rules.AbstractRule {
   /* tslint:disable:object-literal-sort-keys */
   public static metadata: Lint.IRuleMetadata = {
-    'ruleName': 'structured-imports',
-    'description': 'Enforce structure to your imports. Import structure should be listed in the folloing order: modules, absolute imports,  relative parent/ancestor directories, relative sibling directors.',
+    'ruleName': 'import-type-order',
+    'description': 'Enforce structure to your imports. Import structure should be listed in the following order: modules, absolute imports,  relative parent/ancestor directories, relative sibling directors.',
     'hasFix': false,
     'optionsDescription': 'Not configurable.',
     'options': null,
     'optionExamples': null,
     'type': 'style',
-    'typescriptOnly': false,
+    'typescriptOnly': true,
   };
   /* tslint:enable:object-literal-sort-keys */
 
@@ -24,13 +24,13 @@ export class Rule extends Lint.Rules.AbstractRule {
 }
 
 enum ImportType {
-  Module = 0, // 'module'
+  External = 0, // 'external'
   Absolute = 1, // '/some/folder/file'
-  RelativeAncestor = 2, // '../parentFolder'
-  RelativeSibling = 3, // './siblingFolder'
+  Ancestor = 2, // '../parentFolder'
+  Sibling = 3, // './siblingFolder'
 };
 
-const importStuctureOrder = [ImportType.Module, ImportType.Absolute, ImportType.RelativeAncestor, ImportType.RelativeSibling];
+const importStuctureOrder = [ImportType.External, ImportType.Absolute, ImportType.Ancestor, ImportType.Sibling];
 
 class StructuredImportsWalker extends Lint.RuleWalker {
   private previousImport: ImportType;
@@ -72,13 +72,13 @@ function getNextOrderedImport(importType: ImportType) {
 
 function getImportType(path: string): ImportType {
   if (isRelativeSibling(path)) {
-    return ImportType.RelativeSibling;
+    return ImportType.Sibling;
   } else if (isRelativeAncestor(path)) {
-    return ImportType.RelativeAncestor;
+    return ImportType.Ancestor;
   } else if (isAbsolute(path)) {
     return ImportType.Absolute;
   }
-  return ImportType.Module;
+  return ImportType.External;
 }
 
 function isAbsolute(path: string) {

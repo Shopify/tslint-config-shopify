@@ -2,6 +2,6 @@ module.exports = {
   'rulesDirectory': ['./customRules'],
   'rules': {
     'trailing-comma-interface': true,
-    'structured-imports': true,
+    'import-type-order': true,
   },
 };
