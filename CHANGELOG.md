@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [1.5.0] - 2017-03-14
+### Added
+- Update tslint react to v2.5.0 [#52](https://github.com/Shopify/tslint-config-shopify/pull/52)
+
 ## [1.4.0] - 2017-03-06
 ### Added
 - Added new tslint rules from [v4.4.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v440) and [v4.5.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v450) releases [(#33)](https://github.com/Shopify/tslint-config-shopify/pull/33):
@@ -70,4 +74,3 @@
 ### Added
 
 - Initial release ([#5](https://github.com/Shopify/tslint-config-shopify/pull/5))
-
