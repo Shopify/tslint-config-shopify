@@ -4,7 +4,7 @@
 - Improves readability and organization by grouping naturally related items together.
 
 ## Rule Details
-Enforce order of import statement types. Import structure should be listed in the following order:
+Enforce order of import statement types. Imports should be listed in the following order:
 
 * Externals
 * Absolute paths
@@ -13,8 +13,8 @@ Enforce order of import statement types. Import structure should be listed in th
 
 The following are considered warnings
 ```js
-import Foo from './foo';
-import Baz = '../baz';
+import Foo from './foo'; // Should come after external and parent imports.
+import Baz = '../baz'; // Should come after external imports
 import BarModule from 'BarModule';
 ```
 

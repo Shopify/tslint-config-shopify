@@ -40,21 +40,23 @@ function walker(context: Lint.WalkContext<void>): void {
 
   if (importNodes.length === 0) { return; }
 
-  let previousImport = getImportType(importNodes.shift().moduleSpecifier.getText());
+  let lastValidType = getImportType(importNodes.shift());
   while (importNodes.length) {
-    const currentImportNode = importNodes.shift().moduleSpecifier;
-    const currentImport = getImportType(currentImportNode.getText());
-    if (previousImport > currentImport) {
-      const errorStart = currentImportNode.getStart();
-      const errorWidth = currentImportNode.getEnd() - errorStart;
+    const currentNode = importNodes.shift();
+    const currentType = getImportType(currentNode);
+    if (lastValidType > currentType) {
+      const {moduleSpecifier} = currentNode;
+      const errorStart = moduleSpecifier.getStart();
+      const errorWidth = moduleSpecifier.getEnd() - errorStart;
       context.addFailureAt(errorStart, errorWidth, Rule.IMPORT_TYPE_ORDER_ERROR);
     } else {
-      previousImport = currentImport;
+      lastValidType = currentType;
     }
   }
 }
 
-function getImportType(path: string): ImportType {
+function getImportType({moduleSpecifier}: ts.ImportDeclaration): ImportType {
+  const path = moduleSpecifier.getText();
   if (path.substr(1, 2) === './') {
     return ImportType.Sibling;
   } else if (path.substr(1, 3) === '../') {

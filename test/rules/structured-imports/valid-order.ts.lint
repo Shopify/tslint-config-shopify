@@ -1,4 +1,5 @@
 import {Foo, Bar, Baz} from 'FooBarBaz';
 import BazTwo from '/Baz';
 import FooTwo from '../foo';
+import './side-effect'
 import BarTwo from './Bar';
