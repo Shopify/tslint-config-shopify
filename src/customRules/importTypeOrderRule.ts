@@ -15,10 +15,10 @@ export class Rule extends Lint.Rules.AbstractRule {
   };
   /* tslint:enable:object-literal-sort-keys */
 
-  public static STRUCTURED_IMPORTS_ABS_FIRST_ERROR = 'Imports should be listed in the following order: module imports, absolute imports, ancestor imports, sibling imports.';
+  public static IMPORT_TYPE_ORDER_ERROR = 'Imports should be listed in the following order: module imports, absolute imports, ancestor imports, sibling imports.';
 
   public apply(sourceFile: ts.SourceFile): Lint.RuleFailure[] {
-    const structuredImportsWalker = new StructuredImportsWalker(sourceFile, this.getOptions());
+    const structuredImportsWalker = new StructuredImportsWalker(sourceFile, this.ruleName, undefined);
     return this.applyWithWalker(structuredImportsWalker);
   }
 }
@@ -32,43 +32,28 @@ enum ImportType {
 
 const importStuctureOrder = [ImportType.External, ImportType.Absolute, ImportType.Ancestor, ImportType.Sibling];
 
-class StructuredImportsWalker extends Lint.RuleWalker {
-  private previousImport: ImportType;
-  private currentImport: ImportType;
+class StructuredImportsWalker extends Lint.AbstractWalker<void>  {
+  public walk(sourceFile: ts.SourceFile) {
+    const importNodes = sourceFile.statements
+      .filter((child) => child.kind === ts.SyntaxKind.ImportDeclaration)
+      .map((child) => child as ts.ImportDeclaration);
 
-  constructor(sourceFile: ts.SourceFile, options: Lint.IOptions) {
-    super(sourceFile, options);
-  }
+    if (importNodes.length === 0) { return; }
 
-  // e.g. 'import Foo from './foo';'
-  public visitImportDeclaration(node: ts.ImportDeclaration) {
-    const importPath = node.moduleSpecifier.getText();
-    if (!this.previousImport) {
-      this.previousImport = getImportType(importPath);
-      this.currentImport = getImportType(importPath);
-    } else {
-      this.currentImport = getImportType(importPath);
-      if (isCurrentImportValid(this.previousImport, this.currentImport)) {
-        this.previousImport = this.currentImport;
+    let previousImport = getImportType(importNodes.shift().moduleSpecifier.getText());
+    while (importNodes.length) {
+      const currentImportNode = importNodes.shift().moduleSpecifier;
+      const currentImport = getImportType(currentImportNode.getText());
+      if (previousImport > currentImport) {
+        const errorStart = currentImportNode.getStart();
+        const errorWidth = currentImportNode.getEnd() - errorStart;
+        this.addFailureAt(errorStart, errorWidth, Rule.IMPORT_TYPE_ORDER_ERROR);
       } else {
-        this.addFailure(this.createFailure(node.moduleSpecifier.getStart(), node.moduleSpecifier.getFullWidth(), Rule.STRUCTURED_IMPORTS_ABS_FIRST_ERROR));
+        previousImport = currentImport;
       }
     }
   }
-}
-
-function isCurrentImportValid(prevImport: ImportType, currImport: ImportType): boolean {
-  if (prevImport === currImport) {
-    return true;
-  }
-  return getNextOrderedImport(prevImport) === currImport;
-}
-
-function getNextOrderedImport(importType: ImportType) {
-  if (importType < importStuctureOrder.length - 1) {
-    return importStuctureOrder[(importType as number) + 1];
-  }
-}
+};
 
 function getImportType(path: string): ImportType {
   if (path.substr(1, 2) === './') {

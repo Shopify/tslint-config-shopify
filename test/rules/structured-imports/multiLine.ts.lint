@@ -2,9 +2,9 @@ import Foo from './foo';
 import Bar from './Bar';
 
 import {Foo, Bar, Baz} from 'FooBarBaz';
-                            ~~~~~~~~~~~~ [0]
+                            ~~~~~~~~~~~ [0]
 import BarModule from 'BarModule';
-                      ~~~~~~~~~~~~ [0]
+                      ~~~~~~~~~~~ [0]
 
 import Foo2 from './foo2';
 import Bar2 from './Bar2';
