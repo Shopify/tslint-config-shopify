@@ -9,7 +9,7 @@ export default {
   // Allows blacklisting of props in JSX with an optional explanatory message in the reported failure.
   'jsx-ban-props': false,
   // When using a boolean attribute in JSX, you can set the attribute value to true or omit the value. // This rule will enforce one or the other to keep consistency in your code.
-  'jsx-boolean-value': true,
+  'jsx-boolean-value': [true, 'never'],
   // Requires or bans spaces between curly brace characters in JSX; Rule options: ["always", "never"]
   'jsx-curly-spacing': ['never'],
   // Creating new anonymous functions (with either the function syntax or ES2015 arrow syntax) inside the render call stack works against pure component rendering.
