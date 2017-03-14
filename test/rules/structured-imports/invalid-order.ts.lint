@@ -1,12 +1,10 @@
-import Foo from './foo';
-import Bar from './Bar';
 
+import BarTwo from './Bar';
+import FooTwo from '../foo';
+                   ~~~~~~~~ [0]
+import BazTwo from '/Baz';
+                   ~~~~~~ [0]
 import {Foo, Bar, Baz} from 'FooBarBaz';
                             ~~~~~~~~~~~ [0]
-import BarModule from 'BarModule';
-                      ~~~~~~~~~~~ [0]
-
-import Foo2 from './foo2';
-import Bar2 from './Bar2';
 
 [0]: Imports should be listed in the following order: module imports, absolute imports, ancestor imports, sibling imports.

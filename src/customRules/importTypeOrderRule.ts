@@ -57,7 +57,7 @@ function walker(context: Lint.WalkContext<void>): void {
 function getImportType(path: string): ImportType {
   if (path.substr(1, 2) === './') {
     return ImportType.Sibling;
-  } else if (path.substr(1, 4) === '../') {
+  } else if (path.substr(1, 3) === '../') {
     return ImportType.Ancestor;
   } else if (path[1] === '/') {
     return ImportType.Absolute;

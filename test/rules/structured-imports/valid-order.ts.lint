@@ -1,0 +1,4 @@
+import {Foo, Bar, Baz} from 'FooBarBaz';
+import BazTwo from '/Baz';
+import FooTwo from '../foo';
+import BarTwo from './Bar';

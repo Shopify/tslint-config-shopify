@@ -1,2 +1,0 @@
-import BarModule from 'BarModule';
-import Foo from './foo';
