@@ -1,0 +1,9 @@
+import './Bar';
+import '../foo';
+       ~~~~~~~~ [0]
+import '/Baz';
+       ~~~~~~ [0]
+import 'FooBarBaz';
+       ~~~~~~~~~~~ [0]
+
+[0]: Imports should be listed in the following order: module imports, absolute imports, ancestor imports, sibling imports.
