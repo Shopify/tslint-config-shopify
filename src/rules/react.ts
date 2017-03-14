@@ -8,6 +8,8 @@ export default {
   'jsx-alignment': true,
   // Allows blacklisting of props in JSX with an optional explanatory message in the reported failure.
   'jsx-ban-props': false,
+  // When using a boolean attribute in JSX, you can set the attribute value to true or omit the value. // This rule will enforce one or the other to keep consistency in your code.
+  'jsx-boolean-value': true,
   // Requires or bans spaces between curly brace characters in JSX; Rule options: ["always", "never"]
   'jsx-curly-spacing': ['never'],
   // Creating new anonymous functions (with either the function syntax or ES2015 arrow syntax) inside the render call stack works against pure component rendering.
@@ -20,6 +22,8 @@ export default {
   'jsx-no-string-ref': true,
   // Enforces that JSX elements with no children are self-closing.
   'jsx-self-close': true,
+  // Enforces use of a translation function. Plain string literals are disallowed in JSX when enabled.
+  'jsx-use-translation-function': true,
   // Enforces that multiline JSX expressions are wrapped with parentheses.
   // Opening parenthesis must be followed by a newline.
   // Closing parenthesis must be preceded by a newline.
