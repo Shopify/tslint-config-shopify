@@ -4,12 +4,7 @@
 - Improves readability and organization by grouping naturally related items together.
 
 ## Rule Details
-Enforce order of import statement types. Imports should be listed in the following order:
-
-* Externals
-* Absolute paths
-* Parent directories
-* Siblings
+Improves readability and organization by grouping related imports together. Imports should be listed in order of: external modules, absolute paths, relative paths, relative siblings.
 
 The following are considered warnings
 ```js
@@ -21,11 +16,9 @@ import BarModule from 'BarModule';
 The following import order is valid:
 
 ```js
-export interface TheThreeStooges {
 import BarModule from 'BarModule';
 import Baz = '../baz';
 import Foo from './foo';
-}
 ```
 
 ## When Not To Use It

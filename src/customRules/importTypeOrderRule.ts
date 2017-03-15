@@ -16,7 +16,7 @@ export class Rule extends Lint.Rules.AbstractRule {
   };
   /* tslint:enable:object-literal-sort-keys */
 
-  public static IMPORT_TYPE_ORDER_ERROR = 'Imports should be listed in the following order: module imports, absolute imports, ancestor imports, sibling imports.';
+  public static IMPORT_TYPE_ORDER_ERROR = 'Imports should be listed in the following order: external imports, absolute imports, ancestor imports, sibling imports.';
 
   public apply(sourceFile: ts.SourceFile): Lint.RuleFailure[] {
     return this.applyWithFunction(sourceFile, walker);
