@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## [1.5.0] - 2017-03-14
+## [1.5.0] - 2017-03-15
 ### Added
 - Update tslint react to v2.5.0 [#52](https://github.com/Shopify/tslint-config-shopify/pull/52)
 - Created a custom rule for import-type-order [#48](https://github.com/Shopify/tslint-config-shopify/pull/48)
