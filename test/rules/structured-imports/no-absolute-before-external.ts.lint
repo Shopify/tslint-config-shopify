@@ -1,0 +1,5 @@
+import Foo from '/foo';
+import {Bar, Baz} from 'BarBaz';
+                       ~~~~~~~~ [0]
+
+[0]: Imports should be listed in the following order: external imports, absolute imports, ancestor imports, sibling imports.
