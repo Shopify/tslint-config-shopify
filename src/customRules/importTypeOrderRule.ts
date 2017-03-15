@@ -6,7 +6,7 @@ export class Rule extends Lint.Rules.AbstractRule {
   /* tslint:disable:object-literal-sort-keys */
   public static metadata: Lint.IRuleMetadata = {
     'ruleName': 'import-type-order',
-    'description': 'Enforce structure to your imports. Import structure should be listed in the following order: modules, absolute imports,  relative parent/ancestor directories, relative sibling directors.',
+    'description': 'Improves readability and organization by grouping related imports together. Imports should be listed in order of: external modules, absolute paths, relative paths, relative siblings.',
     'hasFix': false,
     'optionsDescription': 'Not configurable.',
     'options': null,

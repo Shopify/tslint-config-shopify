@@ -4,7 +4,12 @@
 - Improves readability and organization by grouping naturally related items together.
 
 ## Rule Details
-Improves readability and organization by grouping related imports together. Imports should be listed in order of: external modules, absolute paths, relative paths, relative siblings.
+Enforce order of import statement types. Import statments should be listed in the following order:
+
+- Externals
+- Absolute paths
+- Parent paths
+- Sibling paths
 
 The following are considered warnings
 ```js
