@@ -36,11 +36,11 @@
     "@types/node": "^7.0.5",
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.0",
-    "tslint": "4.5.x",
+    "tslint": "^5.1.0",
     "typescript": "^2.3.2"
   },
   "peerDependencies": {
-    "tslint": "4.5.x"
+    "tslint": "^5.1.0"
   },
   "dependencies": {
     "tslint-react": "^2.5.0"
