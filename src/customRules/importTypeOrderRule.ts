@@ -28,7 +28,7 @@ enum ImportType {
   Absolute = 1, // '/some/folder/file'
   Ancestor = 2, // '../parentFolder'
   Sibling = 3, // './siblingFolder'
-};
+}
 
 const importStuctureOrder = [ImportType.External, ImportType.Absolute, ImportType.Ancestor, ImportType.Sibling];
 
@@ -65,4 +65,4 @@ function getImportType({moduleSpecifier}: ts.ImportDeclaration): ImportType {
     return ImportType.Absolute;
   }
   return ImportType.External;
-};
+}
