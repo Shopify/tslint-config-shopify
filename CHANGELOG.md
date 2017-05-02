@@ -4,14 +4,16 @@
 
 ## [2.0.0] - 2017-05-02
 ### Added
-- Added new `tslint` [v5.0.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v500), [v5.1.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v510) rules and new `tslint-react`[v2.6.0](https://github.com/palantir/tslint-react/releases/tag/2.6.0) rules [(#61)](https://github.com/Shopify/tslint-config-shopify/pull/61)
+- Added new `tslint` rules from [v5.0.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v500) and [v5.1.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v510) releases
     * `no-invalid-template-strings`
     * `no-sparse-arrays`
     * `no-unnecessary-callback-wrapper`
-    * `jsx-no-bind` (tslint-react)
     * `no-reference-import`
     * `prefer-template`
     * `return-undefined`
+- Added new `tslint-react` rules from [v2.6.0](https://github.com/palantir/tslint-react/releases/tag/2.6.0) release [(#61)](https://github.com/Shopify/tslint-config-shopify/pull/61)
+    * `jsx-no-bind` (tslint-react)
+
 
 ## [1.5.0] - 2017-03-15
 ### Added
