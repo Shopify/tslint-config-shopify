@@ -45,6 +45,8 @@ export default {
   'no-for-in-array': true,
   // Disallow type inference of {} (empty object type) at function and constructor call sites
   'no-inferred-empty-object-type': true,
+  // Warns on use of ${ in non-template strings.
+  'no-invalid-template-strings': false,
   // Disallows using the `this` keyword outside of classes.
   'no-invalid-this': true,
   // Warns on apparent attempts to define constructors for interfaces or new for classes.
@@ -53,6 +55,8 @@ export default {
   'no-null-keyword': false,
   // Disallows shadowing variable declarations.
   'no-shadowed-variable': true,
+  // Forbids array literals to contain missing elements.
+  'no-sparse-arrays': false,
   // Disallows object access via string literals.
   'no-string-literal': false,
   // Flags throwing plain strings or concatenations of strings because only Errors produce proper stack traces.

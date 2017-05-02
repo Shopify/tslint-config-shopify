@@ -43,6 +43,8 @@ export default {
   'no-consecutive-blank-lines': [true, 2],
   // Disallows parameter properties in class constructors.
   'no-parameter-properties': false,
+  // Don’t if you import “foo” anyway.
+  'no-reference-import': false,
   // Enforces consistent object literal property quote style.
   'object-literal-key-quotes': [true, 'as-needed'],
   // Enforces use of ES6 object literal shorthand when possible.
@@ -57,6 +59,10 @@ export default {
   'prefer-function-over-method': true,
   // Prefer foo(): void over foo: () => void in interfaces and types.
   'prefer-method-signature': true,
+  // Prefer a template expression over string literal concatenation.
+  'prefer-template': false,
+  // Prefer return; in void functions and return undefined; in value-returning functions.
+  'return-undefined': false,
   // Requires single or double quotes for string literals.
   'quotemark': [true, 'single', 'jsx-double', 'avoid-escape'],
   // Enforces consistent semicolon usage at the end of every statement.
