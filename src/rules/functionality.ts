@@ -72,8 +72,6 @@ export default {
   'no-unsafe-finally': true,
   // Disallows unused expression statements.
   'no-unused-expression': true,
-  // Disallows unused ‘new’ expression statements.
-  'no-unused-new': true,
   // Disallows usage of variables before their declaration.
   'no-use-before-declare': true,
   // Disallows usage of the `var` keyword.
