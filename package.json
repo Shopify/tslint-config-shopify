@@ -43,6 +43,6 @@
     "tslint": "^5.1.0"
   },
   "dependencies": {
-    "tslint-react": "^2.5.0"
+    "tslint-react": "^3.0.0"
   }
 }

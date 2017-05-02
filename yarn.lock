@@ -450,9 +450,9 @@ through@2, through@~2.3, through@~2.3.1:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
-tslint-react:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/tslint-react/-/tslint-react-2.5.0.tgz#94cd6143f6ae825c47f242c5146fc89caeadeae2"
+tslint-react@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/tslint-react/-/tslint-react-3.0.0.tgz#00c48ab7f22e91533b62bdef2c162b49447af00a"
 
 tslint@^5.1.0:
   version "5.1.0"
