@@ -46,7 +46,7 @@ export default {
   // Disallow type inference of {} (empty object type) at function and constructor call sites
   'no-inferred-empty-object-type': true,
   // Warns on use of ${ in non-template strings.
-  'no-invalid-template-strings': false,
+  'no-invalid-template-strings': true,
   // Disallows using the `this` keyword outside of classes.
   'no-invalid-this': true,
   // Warns on apparent attempts to define constructors for interfaces or new for classes.

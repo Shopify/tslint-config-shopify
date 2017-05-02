@@ -60,7 +60,7 @@ export default {
   // Prefer foo(): void over foo: () => void in interfaces and types.
   'prefer-method-signature': true,
   // Prefer a template expression over string literal concatenation.
-  'prefer-template': false,
+  'prefer-template': true,
   // Prefer return; in void functions and return undefined; in value-returning functions.
   'return-undefined': false,
   // Requires single or double quotes for string literals.
