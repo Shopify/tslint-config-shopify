@@ -13,7 +13,7 @@ export default {
   // Requires or bans spaces between curly brace characters in JSX; Rule options: ["always", "never"]
   'jsx-curly-spacing': ['never'],
   // Forbids function binding in JSX attributes. This has the same intent as jsx-no-lambda in helping you avoid excessive re-rendres.
-  'jsx-no-bind': false,
+  'jsx-no-bind': true,
   // Creating new anonymous functions (with either the function syntax or ES2015 arrow syntax) inside the render call stack works against pure component rendering.
   // When doing an equality check between two lambdas, React will always consider them unequal values and force the component to re-render more often than necessary.
   'jsx-no-lambda': true,

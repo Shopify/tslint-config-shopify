@@ -26,7 +26,7 @@ export default {
   // Disallows trailing whitespace at the end of a line.
   'no-trailing-whitespace': true,
   // Replaces x => f(x) with just f. To catch more cases, enable only-arrow-functions and arrow-return-shorthand too.
-  'no-unnecessary-callback-wrapper': false,
+  'no-unnecessary-callback-wrapper': true,
   // Forbids a ‘var’/’let’ statement or destructuring initializer to be initialized to ‘undefined’.
   'no-unnecessary-initializer': true,
   // Warns when a namespace qualifier (A.x) is unnecessary.
