@@ -44,7 +44,7 @@ export default {
   // Disallows parameter properties in class constructors.
   'no-parameter-properties': false,
   // Don’t if you import “foo” anyway.
-  'no-reference-import': false,
+  'no-reference-import': true,
   // Enforces consistent object literal property quote style.
   'object-literal-key-quotes': [true, 'as-needed'],
   // Enforces use of ES6 object literal shorthand when possible.
