@@ -26,6 +26,8 @@ module.exports = {
     'promise-function-async': false,
     // When adding two variables, operands must both be of type number or of type string.
     'restrict-plus-operands': false,
+    // Prefer return; in void functions and return undefined; in value-returning functions.
+    'return-undefined': false,
     // Usage of &amp;&amp; or || operators should be with boolean operands and
     // expressions in If, Do, While and For statements should be of type boolean
     'strict-boolean-expressions': false,
