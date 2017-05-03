@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## [2.0.0] - 2017-05-02
+## [2.0.0] - 2017-05-03
 ### Added
 - Added new `tslint` rules from [v5.0.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v500) and [v5.1.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v510) releases
     * `no-invalid-template-strings`
