@@ -56,7 +56,7 @@ export default {
   // Disallows shadowing variable declarations.
   'no-shadowed-variable': true,
   // Forbids array literals to contain missing elements.
-  'no-sparse-arrays': false,
+  'no-sparse-arrays': true,
   // Disallows object access via string literals.
   'no-string-literal': false,
   // Flags throwing plain strings or concatenations of strings because only Errors produce proper stack traces.
