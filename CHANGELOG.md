@@ -14,6 +14,8 @@
 - Added new `tslint-react` rules from [v2.6.0](https://github.com/palantir/tslint-react/releases/tag/2.6.0) release [(#61)](https://github.com/Shopify/tslint-config-shopify/pull/61)
     * `jsx-no-bind` (tslint-react)
 
+### Removed
+- `no-unused-new` has been removed from TSLint, logic moved to `no-unused-expression`. See [TSLint v5.0.0 release](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#fire-breaking-changes)
 
 ## [1.5.0] - 2017-03-15
 ### Added
