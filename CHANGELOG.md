@@ -10,7 +10,7 @@
     * `no-unnecessary-callback-wrapper`
     * `no-reference-import`
     * `prefer-template`
-    * `return-undefined`
+    * `return-undefined` (disabled)
 - Added new `tslint-react` rules from [v2.6.0](https://github.com/palantir/tslint-react/releases/tag/2.6.0) release [(#61)](https://github.com/Shopify/tslint-config-shopify/pull/61)
     * `jsx-no-bind` (tslint-react)
 
