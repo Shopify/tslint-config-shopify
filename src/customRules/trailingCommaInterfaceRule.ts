@@ -6,9 +6,10 @@ class TrailingCommaInterfaceWalker extends Lint.RuleWalker {
    public visitInterfaceDeclaration(node: ts.InterfaceDeclaration) {
     node.members.map((propertySignature) => {
         if (propertySignature.getText().slice(-1) !== ',') {
-            this.addFailure(this.createFailure(propertySignature.getStart(),
-                                               propertySignature.getWidth(),
-                                               TrailingCommaInterfaceWalker.FAILURE_STRING));
+          const delimiterPosition = propertySignature.getStart() + propertySignature.getWidth() - 1;
+          const fixer = new Lint.Replacement(delimiterPosition, 1, ',');
+          const failure = this.createFailure(delimiterPosition, 1, TrailingCommaInterfaceWalker.FAILURE_STRING, fixer);
+          this.addFailure(failure);
         }
     });
   }
