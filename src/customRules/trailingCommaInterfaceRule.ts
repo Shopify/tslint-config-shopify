@@ -4,17 +4,15 @@ import * as Lint from 'tslint';
 class TrailingCommaInterfaceWalker extends Lint.RuleWalker {
    private static FAILURE_STRING = 'Trailing comma is required in interfaces properties.';
    public visitInterfaceDeclaration(node: ts.InterfaceDeclaration) {
-    const potentialDelimiters = [';'];
-    node.members.map((propertySignature) => {
+    node.members.filter((propertySignature) => propertySignature.getText().slice(-1) !== ',')
+      .forEach((propertySignature) => {
         const lastChar = propertySignature.getText().slice(-1);
-        if (lastChar !== ',') {
-          const lastCharPosition = propertySignature.getStart() + propertySignature.getWidth() - 1;
-          const replacementText = (potentialDelimiters.indexOf(lastChar) === -1) ? `${lastChar},` : ',';
-          const fixer = new Lint.Replacement(lastCharPosition, 1, replacementText);
-          const failure = this.createFailure(lastCharPosition, 1, TrailingCommaInterfaceWalker.FAILURE_STRING, fixer);
-          this.addFailure(failure);
-        }
-    });
+        const lastCharPosition = propertySignature.getStart() + propertySignature.getWidth() - 1;
+        const replacementText = (lastChar === ';') ? `,` : `${lastChar},`;
+        const fixer = new Lint.Replacement(lastCharPosition, 1, replacementText);
+        const failure = this.createFailure(lastCharPosition, 1, TrailingCommaInterfaceWalker.FAILURE_STRING, fixer);
+        this.addFailure(failure);
+      });
   }
 }
 
