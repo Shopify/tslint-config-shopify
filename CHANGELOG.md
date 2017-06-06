@@ -2,6 +2,24 @@
 
 ## [Unreleased]
 
+### Added
+- Added new `tslint` rules introduced between `v5.2.0`-`v5.4.3` [releases](https://github.com/palantir/tslint/releases)
+    * `no-object-literal-type-assertion` (disabled)
+    * `no-unused-variable`
+    * `prefer-conditional-expression` (disabled)
+    * `prefer-object-spread`
+    * `use-default-type-parameter` (disabled)
+    * `deprecation`
+    * `number-literal-format`
+    * `binary-expression-operand-order`
+    * `encoding`
+    * `no-boolean-literal-compare`
+    * `no-irregular-whitespace`
+    * `prefer-switch` (disabled)
+    * `switch-final-break`
+    * `type-literal-delimiter` (disabled)
+    * `no-unnecessary-type-assertion`
+
 ### Changed
 * Disable `match-default-export-name` rule [(#69)](https://github.com/Shopify/tslint-config-shopify/pull/69)
 * Set indentation size in `indent` rule [(#69)](https://github.com/Shopify/tslint-config-shopify/pull/69)
