@@ -13,6 +13,8 @@ export default {
   'arrow-parens': true,
   // Suggests to convert () => { return x; } to () => x.
   'arrow-return-shorthand': true,
+  // In a binary expression, a literal should always be on the right-hand side if possible. For example, prefer ‘x + 1’ over ‘1 + x’.
+  'binary-expression-operand-order': true,
   // An interface or literal type with just a call signature can be written as a function type.
   'callable-types': false,
   // Enforces PascalCased class and interface names.
@@ -21,6 +23,8 @@ export default {
   'comment-format': [true, 'check-space'],
   // Enforces documentation for important items be filled out.
   'completed-docs': false,
+  // Enforces UTF-8 file encoding. <FEEDBACK>
+  'encoding': true,
   // Enforces a certain header comment for all files, matched by a regular expression.
   'file-header': false,
   // Ensures proper spacing between import statement keywords
@@ -39,8 +43,12 @@ export default {
   'new-parens': true,
   // Requires the use of `as Type` for type assertions instead of `<Type>`.
   'no-angle-bracket-type-assertion': true,
+  // Warns on comparison to a boolean literal, as in x === true.
+  'no-boolean-literal-compare': true,
   // Disallows one or more blank lines in a row.
   'no-consecutive-blank-lines': [true, 2],
+  // Disallow irregular whitespace outside of strings and comments
+  'no-irregular-whitespace': true,
   // Disallows parameter properties in class constructors.
   'no-parameter-properties': false,
   // Don’t if you import “foo” anyway.
@@ -59,6 +67,8 @@ export default {
   'prefer-function-over-method': true,
   // Prefer foo(): void over foo: () => void in interfaces and types.
   'prefer-method-signature': true,
+  // Prefer a switch statement to an if statement with simple === comparisons.
+  'prefer-switch': false,
   // Prefer a template expression over string literal concatenation.
   'prefer-template': true,
   // Prefer return; in void functions and return undefined; in value-returning functions.
@@ -69,6 +79,10 @@ export default {
   'semicolon': [true, 'always', 'ignore-interfaces'],
   // Require or disallow a space before function parenthesis
   'space-before-function-paren': spaceBeforeFunctionParen,
+  // Checks whether the final clause of a switch statement ends in break;.
+  'switch-final-break': true,
+  // Checks that type literal members are separated by semicolons. Enforces a trailing semicolon for multiline type literals.
+  'type-literal-delimiter': false,
   // Checks variable names for various errors.
   'variable-name': [true, 'ban-keywords', 'check-format', 'allow-pascal-case'],
   // Enforces whitespace style conventions.

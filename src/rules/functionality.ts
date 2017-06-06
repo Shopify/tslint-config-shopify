@@ -53,6 +53,8 @@ export default {
   'no-misused-new': true,
   // Disallows use of the `null` keyword literal.
   'no-null-keyword': false,
+  // Forbids an object literal to appear in a type assertion expression. Casting to any is still allowed. <FEEDBACK>
+  'no-object-literal-type-assertion': false,
   // Disallows shadowing variable declarations.
   'no-shadowed-variable': true,
   // Forbids array literals to contain missing elements.
@@ -72,12 +74,18 @@ export default {
   'no-unsafe-finally': true,
   // Disallows unused expression statements.
   'no-unused-expression': true,
+  // Disallows unused imports, variables, functions and private class members. Similar to tsc’s –noUnusedParameters and –noUnusedLocals options, but does not interrupt code compilation.
+  'no-unused-variable': true,
   // Disallows usage of variables before their declaration.
   'no-use-before-declare': true,
   // Disallows usage of the `var` keyword.
   'no-var-keyword': true,
   // Requires expressions of type `void` to appear in statement position.
   'no-void-expression': false,
+  // Recommends to use a conditional expression instead of assigning to the same thing in each branch of an if statement. <FEEDBACK>
+  'prefer-conditional-expression': false,
+  // Enforces the use of the ES2015 object spread operator over Object.assign() where appropriate.
+  'prefer-object-spread': true,
   // Requires the radix parameter to be specified when calling `parseInt`.
   'radix': true,
   // When adding two variables, operands must both be of type number or of type string.
@@ -93,6 +101,8 @@ export default {
   'triple-equals': [true, 'allow-null-check'],
   // Makes sure result of `typeof` is compared to correct string values
   'typeof-compare': true,
+  // Warns if an explicitly specified type argument is the default for that type parameter. <FEEDBACK>
+  'use-default-type-parameter': false,
   // Enforces use of the `isNaN()` function to check for NaN references instead of a comparison to the `NaN` constant.
   'use-isnan': true,
 };

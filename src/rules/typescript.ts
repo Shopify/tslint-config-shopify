@@ -35,6 +35,8 @@ export default {
   'no-reference': true,
   // Disallows the use of require statements except in import statements.
   'no-var-requires': true,
+  // Warns if a type assertion does not change the type of an expression.
+  'no-unnecessary-type-assertion': true,
   // Disallows traditional (non-arrow) function expressions.
   'only-arrow-functions': false,
   // Recommends a ‘for-of’ loop over a standard ‘for’ loop if the index is only used to access the array being iterated.
