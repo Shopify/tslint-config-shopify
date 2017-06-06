@@ -8,7 +8,7 @@ export default {
   // Ensures the file ends with a newline.
   'eofline': true,
   // Enforces indentation with tabs or spaces.
-  'indent': [true, 'spaces'],
+  'indent': [true, 'spaces', 2],
   // Enforces a consistent linebreak style.
   'linebreak-style': false,
   // A file may not contain more than the specified number of classes
