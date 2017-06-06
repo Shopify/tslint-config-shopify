@@ -9,7 +9,7 @@ module.exports = {
     // Does nothing for anonymous default exports.
     'match-default-export-name': false,
     // Warns on comparison to a boolean literal, as in x === true.
-    'no-bcl oolean-literal-compare': false,
+    'no-boolean-literal-compare': false,
     // Promises returned by functions must be handled appropriately.
     'no-floating-promises': false,
     // Disallows iterating over an array with a for-in loop.
