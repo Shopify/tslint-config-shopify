@@ -1,0 +1,5 @@
+export interface Foo {
+  curly?: string[],
+  larry: number,
+  moe: number,
+}
