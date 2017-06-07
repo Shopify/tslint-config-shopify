@@ -32,7 +32,7 @@ export default {
   // Enforces basic format rules for JSDoc comments.
   'jsdoc-format': true,
   // Requires that a default import have the same name as the declaration it imports. Does nothing for anonymous default exports.
-  'match-default-export-name': true,
+  'match-default-export-name': false,
   // Enforces blank line before return when not the only line in the block.
   'newline-before-return': false,
   // Requires parentheses when invoking a constructor via the `new` keyword.

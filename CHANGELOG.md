@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+* Disable `match-default-export-name` rule [(#69)](https://github.com/Shopify/tslint-config-shopify/pull/69)
+* Set indentation size in `indent` rule [(#69)](https://github.com/Shopify/tslint-config-shopify/pull/69)
+
 ## [2.0.0] - 2017-05-03
 ### Added
 - Added new `tslint` rules from [v5.0.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v500) and [v5.1.0](https://github.com/palantir/tslint/blob/master/CHANGELOG.md#v510) releases
