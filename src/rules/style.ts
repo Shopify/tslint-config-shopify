@@ -23,7 +23,7 @@ export default {
   'comment-format': [true, 'check-space'],
   // Enforces documentation for important items be filled out.
   'completed-docs': false,
-  // Enforces UTF-8 file encoding. <FEEDBACK>
+  // Enforces UTF-8 file encoding.
   'encoding': true,
   // Enforces a certain header comment for all files, matched by a regular expression.
   'file-header': false,
