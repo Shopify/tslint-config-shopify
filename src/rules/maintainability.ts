@@ -33,7 +33,7 @@ export default {
   'no-unnecessary-initializer': true,
   // Warns when a namespace qualifier (A.x) is unnecessary.
   'no-unnecessary-qualifier': true,
-  // Checks that decimal literals should begin with ‘0.’ instead of just ‘.’, and should not end with a trailing ‘0’. <FEEDBACK>
+  // Checks that decimal literals should begin with ‘0.’ instead of just ‘.’, and should not end with a trailing ‘0’.
   'number-literal-format': true,
   // Requires keys in object literals to be sorted alphabetically
   'object-literal-sort-keys': false,
