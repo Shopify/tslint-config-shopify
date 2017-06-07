@@ -8,12 +8,10 @@ class TrailingCommaInterfaceWalker extends Lint.RuleWalker {
       .filter((propertySignature) => propertySignature.getText().slice(-1) !== ',')
       .forEach((propertySignature) => {
         const lastChar = propertySignature.getText().slice(-1);
-        // tslint:disable-next-line restrict-plus-operands
         const lastCharPosition = propertySignature.getStart() + propertySignature.getWidth() - 1;
         const replacementText = (lastChar === ';') ? `,` : `${lastChar},`;
         const fixer = new Lint.Replacement(lastCharPosition, 1, replacementText);
-        const failure = this.createFailure(lastCharPosition, 1, TrailingCommaInterfaceWalker.FAILURE_STRING, fixer);
-        this.addFailure(failure);
+        this.addFailureAt(lastCharPosition, 1, TrailingCommaInterfaceWalker.FAILURE_STRING, fixer);
       });
   }
 }
