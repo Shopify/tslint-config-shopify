@@ -75,7 +75,7 @@ export default {
   // Disallows unused expression statements.
   'no-unused-expression': true,
   // Disallows unused imports, variables, functions and private class members. Similar to tsc’s –noUnusedParameters and –noUnusedLocals options, but does not interrupt code compilation.
-  'no-unused-variable': true,
+  'no-unused-variable': false,
   // Disallows usage of variables before their declaration.
   'no-use-before-declare': true,
   // Disallows usage of the `var` keyword.

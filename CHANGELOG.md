@@ -5,7 +5,7 @@
 ### Added
 - Added new `tslint` rules introduced between `v5.2.0`-`v5.4.3` [releases](https://github.com/palantir/tslint/releases)
     * `no-object-literal-type-assertion`
-    * `no-unused-variable`
+    * `no-unused-variable` (disbaled)
     * `prefer-conditional-expression` (disabled)
     * `prefer-object-spread`
     * `use-default-type-parameter` (disabled)
