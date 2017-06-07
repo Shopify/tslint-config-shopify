@@ -4,7 +4,7 @@ module.exports = {
     // Warns for an awaited value that is not a Promise.
     'await-promise': false,
     // Warns when deprecated APIs are used.
-    'deprecation': true,
+    'deprecation': false,
     // Requires that a default import have the same name as the declaration it imports.
     // Does nothing for anonymous default exports.
     'match-default-export-name': false,
