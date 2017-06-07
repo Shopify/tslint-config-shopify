@@ -53,8 +53,8 @@ export default {
   'no-misused-new': true,
   // Disallows use of the `null` keyword literal.
   'no-null-keyword': false,
-  // Forbids an object literal to appear in a type assertion expression. Casting to any is still allowed. <FEEDBACK>
-  'no-object-literal-type-assertion': false,
+  // Forbids an object literal to appear in a type assertion expression. Casting to any is still allowed.
+  'no-object-literal-type-assertion': true,
   // Disallows shadowing variable declarations.
   'no-shadowed-variable': true,
   // Forbids array literals to contain missing elements.
