@@ -26,6 +26,8 @@ module.exports = {
     'no-unsafe-any': false,
     // Disallows unused imports, variables, functions and private class members. Similar to tsc’s –noUnusedParameters and –noUnusedLocals options, but does not interrupt code compilation.
     'no-unused-variable': false,
+    // Disallows usage of variables before their declaration.
+    'no-use-before-declare': false,
     // Requires expressions of type void to appear in statement position.
     'no-void-expression': false,
     // Requires any function or method that returns a promise to be marked async.
