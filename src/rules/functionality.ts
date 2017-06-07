@@ -82,7 +82,7 @@ export default {
   'no-var-keyword': true,
   // Requires expressions of type `void` to appear in statement position.
   'no-void-expression': false,
-  // Recommends to use a conditional expression instead of assigning to the same thing in each branch of an if statement. <FEEDBACK>
+  // Recommends to use a conditional expression instead of assigning to the same thing in each branch of an if statement.
   'prefer-conditional-expression': false,
   // Enforces the use of the ES2015 object spread operator over Object.assign() where appropriate.
   'prefer-object-spread': true,
@@ -101,7 +101,7 @@ export default {
   'triple-equals': [true, 'allow-null-check'],
   // Makes sure result of `typeof` is compared to correct string values
   'typeof-compare': true,
-  // Warns if an explicitly specified type argument is the default for that type parameter. <FEEDBACK>
+  // Warns if an explicitly specified type argument is the default for that type parameter.
   'use-default-type-parameter': false,
   // Enforces use of the `isNaN()` function to check for NaN references instead of a comparison to the `NaN` constant.
   'use-isnan': true,
