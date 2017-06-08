@@ -11,8 +11,7 @@ class TrailingCommaInterfaceWalker extends Lint.RuleWalker {
         const lastCharPosition = propertySignature.getStart() + propertySignature.getWidth() - 1;
         const replacementText = (lastChar === ';') ? `,` : `${lastChar},`;
         const fixer = new Lint.Replacement(lastCharPosition, 1, replacementText);
-        const failure = this.createFailure(lastCharPosition, 1, TrailingCommaInterfaceWalker.FAILURE_STRING, fixer);
-        this.addFailure(failure);
+        this.addFailureAt(lastCharPosition, 1, TrailingCommaInterfaceWalker.FAILURE_STRING, fixer);
       });
   }
 }

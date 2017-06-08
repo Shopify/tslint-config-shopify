@@ -30,8 +30,6 @@ enum ImportType {
   Sibling = 3, // './siblingFolder'
 }
 
-const importStuctureOrder = [ImportType.External, ImportType.Absolute, ImportType.Ancestor, ImportType.Sibling];
-
 function walker(context: Lint.WalkContext<void>): void {
   const { sourceFile } = context;
   const importNodes = sourceFile.statements
