@@ -20,7 +20,7 @@
     "postpublish": "yarn run build:clean",
     "prepublish": "yarn run dist",
     "prelint": "yarn run build",
-    "lint": "tslint -c ./config/full.json './src/**/*.{ts,tsx}' --project ./tsconfig.json --type-check",
+    "lint": "tslint './src/**/*.{ts,tsx}' --project ./tsconfig.json",
     "pretest": "yarn run build",
     "test": "scripts/customRulesTests.sh",
     "check": "npm-run-all test lint build:clean"

@@ -32,7 +32,7 @@ Now you can run TSLint by adding the following linting script to your `package.j
 ```
 {
   "scripts": {
-    "tslint": "tslint -c tslint.json './src/**/*.{ts,tsx}' --project tsconfig.json --type-check"
+    "lint": "tslint './src/**/*.{ts,tsx}' --project tsconfig.json"
   }
 }
 ```
@@ -52,16 +52,6 @@ npm run tslint
 
 * See [here](https://palantir.github.io/tslint/usage/tslint-json/) for more details on configuring your `tslint.json`.
 * See [here](https://palantir.github.io/tslint/rules/) for all the rules provided by [TSlint](https://palantir.github.io/tslint/)
-
-We recommend adding a `lint` task to your `package.json` that runs TSLint as part of CI:
-
-```json
-{
-  "scripts": {
-    "lint": "tslint --config ./tslint.json './src/**/*.{ts,tsx}' --project tsconfig.json"
-  }
-}
-```
 
 Some of the rules configured in `tslint-config-shopify`  may not be sufficient for your project. You can override these rules in `tslint.json`:
 
