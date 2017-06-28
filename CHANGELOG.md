@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [3.0.0] - 207-06-28
+### Removed
+- Removed the `untyped` config. Typed rules are now enabled by default as appropriate, and all modern editors safely disregard them instead of throwing errors.
+
 ## [2.1.0] - 2017-06-08
 ### Added
 - Added new `tslint` rules introduced between `v5.2.0`-`v5.4.3` [releases](https://github.com/palantir/tslint/releases)
