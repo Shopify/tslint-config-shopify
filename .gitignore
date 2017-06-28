@@ -5,6 +5,5 @@ node_modules
 customRules.js
 base.js
 react.js
-untyped.js
 .DS_STORE
 *.log

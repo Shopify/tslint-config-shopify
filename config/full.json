@@ -1,6 +1,0 @@
-{
-  "extends": [
-    "../build/base.js",
-    "./rules.js"
-  ]
-}
