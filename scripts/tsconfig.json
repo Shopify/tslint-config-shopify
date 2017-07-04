@@ -1,0 +1,13 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "noEmit": true,
+        "lib": ["dom", "es2016"]
+    },
+    "include": [
+        "missingRules.ts"
+    ],
+    "exclude": [
+        "../node_modules"
+    ]
+}
