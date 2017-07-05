@@ -13,8 +13,7 @@
   "main": "./base",
   "scripts": {
     "prebuild": "yarn run clean",
-    "clean:build": "rimraf build rules customRules '*.js'",
-    "clean": "yarn run clean:build",
+    "clean": "rimraf build rules customRules '*.js'",
     "build": "tsc",
     "predist": "yarn run build",
     "dist": "cp -R build/** .",
