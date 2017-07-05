@@ -2,8 +2,6 @@ build
 node_modules
 /rules
 /customRules
-customRules.js
-base.js
-react.js
+/*.js
 .DS_STORE
 *.log

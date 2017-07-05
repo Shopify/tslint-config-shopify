@@ -12,18 +12,19 @@
   ],
   "main": "./base",
   "scripts": {
-    "prebuild": "yarn run build:clean",
-    "build:clean": "rimraf build rules customRules base.js react.js",
+    "prebuild": "yarn run clean",
+    "clean": "rimraf build rules customRules '*.js'",
     "build": "tsc",
     "predist": "yarn run build",
     "dist": "cp -R build/** .",
-    "postpublish": "yarn run build:clean",
+    "postpublish": "yarn run clean",
     "prepublish": "yarn run dist",
     "prelint": "yarn run build",
     "lint": "tslint './src/**/*.{ts,tsx}' --project ./tsconfig.json",
     "pretest": "yarn run build",
     "test": "scripts/customRulesTests.sh",
-    "check": "npm-run-all test lint build:clean"
+    "check": "npm-run-all test lint clean",
+    "missing-rules": "ts-node --project ./scripts/tsconfig.json scripts/missingRules.ts"
   },
   "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",
   "repository": "https://github.com/Shopify/tslint-config-shopify",
@@ -33,10 +34,17 @@
     "url": "https://github.com/Shopify/tslint-config-shopify/issues"
   },
   "devDependencies": {
+    "@types/chalk": "^0.4.31",
+    "@types/jsdom": "^11.0.0",
     "@types/node": "^7.0.5",
+    "chalk": "^1.1.3",
+    "isomorphic-fetch": "^2.2.1",
+    "jsdom": "^11.0.0",
+    "node-emoji": "^1.5.1",
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.0",
     "tslint": "^5.4.3",
+    "ts-node": "^3.0.6",
     "typescript": "^2.3.2"
   },
   "peerDependencies": {
