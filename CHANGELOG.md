@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## [3.0.0] - 207-06-28
+## [3.0.0] - 2017-06-28
 ### Removed
 - Removed the `untyped` config. Typed rules are now enabled by default as appropriate, and all modern editors safely disregard them instead of throwing errors.
 
