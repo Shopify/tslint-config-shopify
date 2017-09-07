@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+### Fixed
+- Fixed a regression where `import { foo }...` would be enforced instead of `import {foo}...`
+- Fixed a regression where a block could open without a space before it (e.g. `function(){ return 'foo'; }` would be valid while missing whitespace between `)` and `{`)
+
+
 ## [3.0.0] - 2017-06-28
 ### Removed
 - Removed the `untyped` config. Typed rules are now enabled by default as appropriate, and all modern editors safely disregard them instead of throwing errors.
