@@ -86,5 +86,17 @@ export default {
   // Checks variable names for various errors.
   'variable-name': [true, 'ban-keywords', 'check-format', 'allow-pascal-case'],
   // Enforces whitespace style conventions.
-  'whitespace': [true, 'check-branch', 'check-decl', 'check-operator', 'check-module', 'check-separator', 'check-type', 'check-typecast'],
+  'whitespace': [
+    true,
+    'check-branch',
+    'check-decl',
+    'check-operator',
+    // 'check-module', <- Omitted to allow `import {foo}...` (no whitespace around `foo`)
+    'check-separator',
+    'check-rest-spread',
+    'check-type',
+    'check-typecast',
+    'check-type-operator',
+    'check-preblock',
+  ],
 };
