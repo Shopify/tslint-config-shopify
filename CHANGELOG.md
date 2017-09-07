@@ -3,8 +3,8 @@
 ## [Unreleased]
 
 ### Fixed
-- Fixed a regression where `import { foo }...` would be enforced instead of `import {foo}...`
-- Fixed a regression where a block could open without a space before it (e.g. `function(){ return 'foo'; }` would be valid while missing whitespace between `)` and `{`)
+- Fixed a regression where `import { foo }...` would be enforced instead of `import {foo}...` ([74](https://github.com/Shopify/tslint-config-shopify/pull/74))
+- Fixed a regression where a block could open without a space before it (e.g. `function(){ return 'foo'; }` would be valid while missing whitespace between `)` and `{`) ([74](https://github.com/Shopify/tslint-config-shopify/pull/74))
 
 
 ## [3.0.0] - 2017-06-28
