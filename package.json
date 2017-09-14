@@ -1,6 +1,6 @@
 {
   "name": "tslint-config-shopify",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Shopify's baseline TSLint config.",
   "keywords": [
     "tslint",
@@ -43,8 +43,8 @@
     "node-emoji": "^1.5.1",
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.0",
-    "tslint": "^5.4.3",
     "ts-node": "^3.0.6",
+    "tslint": "^5.4.3",
     "typescript": "^2.3.2"
   },
   "peerDependencies": {
