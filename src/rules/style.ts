@@ -63,8 +63,8 @@ export default {
   'one-variable-per-declaration': true,
   // Requires that import statements be alphabetized.
   'ordered-imports': false,
-  // Warns for class methods that do not use ‘this’.
-  'prefer-function-over-method': true,
+  // Do not warn for class methods that do not use ‘this’.
+  'prefer-function-over-method': false,
   // Prefer foo(): void over foo: () => void in interfaces and types.
   'prefer-method-signature': true,
   // Prefer a switch statement to an if statement with simple === comparisons.
