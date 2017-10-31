@@ -24,7 +24,8 @@
     "pretest": "yarn run build",
     "test": "scripts/customRulesTests.sh",
     "check": "npm-run-all test lint clean",
-    "missing-rules": "ts-node --project ./scripts/tsconfig.json scripts/missingRules.ts"
+    "missing-rules":
+      "ts-node --project ./scripts/tsconfig.json scripts/missingRules.ts"
   },
   "homepage": "https://github.com/Shopify/tslint-config-shopify#readme",
   "repository": "https://github.com/Shopify/tslint-config-shopify",
