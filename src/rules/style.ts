@@ -84,7 +84,7 @@ export default {
   // Checks that type literal members are separated by semicolons. Enforces a trailing semicolon for multiline type literals.
   'type-literal-delimiter': false,
   // Checks variable names for various errors.
-  'variable-name': [true, 'ban-keywords', 'check-format', 'allow-pascal-case'],
+  'variable-name': [true, 'ban-keywords', 'check-format', 'allow-pascal-case', 'allow-leading-underscore'],
   // Enforces whitespace style conventions.
   'whitespace': [
     true,
