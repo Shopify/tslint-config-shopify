@@ -2,10 +2,14 @@
 
 <!-- ## [Unreleased] -->
 
+## [3.0.2] - 2017-11-01
+### Fixed
+- Fixed a regression where `allow-leading-underscore` was removed, disallowing leading underscores in variable names ([#80](https://github.com/Shopify/tslint-config-shopify/pull/80))
+
 ## [3.0.1] - 2017-09-14
 ### Fixed
-- Fixed a regression where `import { foo }...` would be enforced instead of `import {foo}...` ([74](https://github.com/Shopify/tslint-config-shopify/pull/74))
-- Fixed a regression where a block could open without a space before it (e.g. `function(){ return 'foo'; }` would be valid while missing whitespace between `)` and `{`) ([74](https://github.com/Shopify/tslint-config-shopify/pull/74))
+- Fixed a regression where `import { foo }...` would be enforced instead of `import {foo}...` ([#74](https://github.com/Shopify/tslint-config-shopify/pull/74))
+- Fixed a regression where a block could open without a space before it (e.g. `function(){ return 'foo'; }` would be valid while missing whitespace between `)` and `{`) ([#74](https://github.com/Shopify/tslint-config-shopify/pull/74))
 
 ## [3.0.0] - 2017-06-28
 ### Removed
@@ -123,5 +127,6 @@
 
 - Initial release ([#5](https://github.com/Shopify/tslint-config-shopify/pull/5))
 
-[Unreleased]: https://github.com/Shopify/tslint-config-shopify/compare/v3.0.1...HEAD
+[Unreleased]: https://github.com/Shopify/tslint-config-shopify/compare/v3.0.2...HEAD
+[3.0.2]: https://github.com/Shopify/tslint-config-shopify/compare/v3.0.1...v3.0.2
 [3.0.1]: https://github.com/Shopify/tslint-config-shopify/compare/v3.0.0...v3.0.1
