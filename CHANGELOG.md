@@ -3,6 +3,9 @@
 <!-- ## [Unreleased] -->
 
 ## [3.0.2] - 2017-11-01
+### Removed
+- Do not warn for class methods that do not use `this` ([#78](https://github.com/Shopify/tslint-config-shopify/pull/78))
+
 ### Fixed
 - Fixed a regression where `allow-leading-underscore` was removed, disallowing leading underscores in variable names ([#80](https://github.com/Shopify/tslint-config-shopify/pull/80))
 
