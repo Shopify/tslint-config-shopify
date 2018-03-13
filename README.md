@@ -1,6 +1,9 @@
 # tslint-config-shopify
+
 [![Circle CI](https://circleci.com/gh/Shopify/eslint-plugin-shopify.svg?style=shield)](https://circleci.com/gh/Shopify/tslint-config-shopify)
 [![David-DM](https://david-dm.org/shopify/tslint-config-shopify.svg)](https://david-dm.org/Shopify/tslint-config-shopify)
+
+### ⚠️ Deprecated: use [eslint-plugin-shopfiy](https://github.com/Shopify/eslint-plugin-shopify) instead ⚠️
 
 Shopify’s TSlint rules and configs.
 
