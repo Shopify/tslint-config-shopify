@@ -2,7 +2,10 @@
 
 <!-- ## [Unreleased] -->
 
-## [3.0.2] - 2017-11-01
+## [3.0.2] - 2018-06-07
+
+### ⚠️ Deprecated: use [eslint-plugin-shopfiy](https://github.com/Shopify/eslint-plugin-shopify) instead ⚠️
+
 ### Removed
 - Do not warn for class methods that do not use `this` ([#78](https://github.com/Shopify/tslint-config-shopify/pull/78))
 
