@@ -11,6 +11,9 @@
     "shopify"
   ],
   "main": "./base",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prebuild": "yarn run clean",
     "clean": "rimraf build rules customRules '*.js'",
